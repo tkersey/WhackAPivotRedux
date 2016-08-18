@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
+		52E8F53B1D6619990041A888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* ViewController.swift */; };
+		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
+		52E8F5401D6619990041A888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53F1D6619990041A888 /* Assets.xcassets */; };
+		52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F5411D6619990041A888 /* LaunchScreen.storyboard */; };
+		52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E8F54A1D6619990041A888 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52E8F52D1D6619990041A888 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52E8F5341D6619990041A888;
+			remoteInfo = WhackAPivotRedux;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52E8F53A1D6619990041A888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52E8F53D1D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52E8F53F1D6619990041A888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52E8F5421D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52E8F5441D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E8F5491D6619990041A888 /* WhackAPivotReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAPivotReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackAPivotReduxTests.swift; sourceTree = "<group>"; };
+		52E8F54F1D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52E8F5321D6619990041A888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E8F5461D6619990041A888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52E8F52C1D6619990041A888 = {
+			isa = PBXGroup;
+			children = (
+				52E8F5371D6619990041A888 /* WhackAPivotRedux */,
+				52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */,
+				52E8F5361D6619990041A888 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52E8F5361D6619990041A888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5351D6619990041A888 /* WhackAPivotRedux.app */,
+				52E8F5491D6619990041A888 /* WhackAPivotReduxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52E8F5371D6619990041A888 /* WhackAPivotRedux */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5381D6619990041A888 /* AppDelegate.swift */,
+				52E8F53A1D6619990041A888 /* ViewController.swift */,
+				52E8F53C1D6619990041A888 /* Main.storyboard */,
+				52E8F53F1D6619990041A888 /* Assets.xcassets */,
+				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52E8F5441D6619990041A888 /* Info.plist */,
+			);
+			path = WhackAPivotRedux;
+			sourceTree = "<group>";
+		};
+		52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */,
+				52E8F54F1D6619990041A888 /* Info.plist */,
+			);
+			path = WhackAPivotReduxTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52E8F5341D6619990041A888 /* WhackAPivotRedux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E8F5521D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotRedux" */;
+			buildPhases = (
+				52E8F5311D6619990041A888 /* Sources */,
+				52E8F5321D6619990041A888 /* Frameworks */,
+				52E8F5331D6619990041A888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhackAPivotRedux;
+			productName = WhackAPivotRedux;
+			productReference = 52E8F5351D6619990041A888 /* WhackAPivotRedux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52E8F5481D6619990041A888 /* WhackAPivotReduxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E8F5551D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotReduxTests" */;
+			buildPhases = (
+				52E8F5451D6619990041A888 /* Sources */,
+				52E8F5461D6619990041A888 /* Frameworks */,
+				52E8F5471D6619990041A888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E8F54B1D6619990041A888 /* PBXTargetDependency */,
+			);
+			name = WhackAPivotReduxTests;
+			productName = WhackAPivotReduxTests;
+			productReference = 52E8F5491D6619990041A888 /* WhackAPivotReduxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52E8F52D1D6619990041A888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Pivotal Labs";
+				TargetAttributes = {
+					52E8F5341D6619990041A888 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78NNNKRM7Q;
+						ProvisioningStyle = Automatic;
+					};
+					52E8F5481D6619990041A888 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78NNNKRM7Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52E8F5341D6619990041A888;
+					};
+				};
+			};
+			buildConfigurationList = 52E8F5301D6619990041A888 /* Build configuration list for PBXProject "WhackAPivotRedux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52E8F52C1D6619990041A888;
+			productRefGroup = 52E8F5361D6619990041A888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52E8F5341D6619990041A888 /* WhackAPivotRedux */,
+				52E8F5481D6619990041A888 /* WhackAPivotReduxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E8F5331D6619990041A888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */,
+				52E8F5401D6619990041A888 /* Assets.xcassets in Resources */,
+				52E8F53E1D6619990041A888 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E8F5471D6619990041A888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52E8F5311D6619990041A888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E8F53B1D6619990041A888 /* ViewController.swift in Sources */,
+				52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E8F5451D6619990041A888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52E8F54B1D6619990041A888 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52E8F5341D6619990041A888 /* WhackAPivotRedux */;
+			targetProxy = 52E8F54A1D6619990041A888 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52E8F53C1D6619990041A888 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52E8F53D1D6619990041A888 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52E8F5411D6619990041A888 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52E8F5421D6619990041A888 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52E8F5501D6619990041A888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52E8F5511D6619990041A888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52E8F5531D6619990041A888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78NNNKRM7Q;
+				INFOPLIST_FILE = WhackAPivotRedux/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotRedux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52E8F5541D6619990041A888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78NNNKRM7Q;
+				INFOPLIST_FILE = WhackAPivotRedux/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotRedux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		52E8F5561D6619990041A888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78NNNKRM7Q;
+				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
+			};
+			name = Debug;
+		};
+		52E8F5571D6619990041A888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78NNNKRM7Q;
+				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E8F5301D6619990041A888 /* Build configuration list for PBXProject "WhackAPivotRedux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E8F5501D6619990041A888 /* Debug */,
+				52E8F5511D6619990041A888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E8F5521D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotRedux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E8F5531D6619990041A888 /* Debug */,
+				52E8F5541D6619990041A888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52E8F5551D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotReduxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E8F5561D6619990041A888 /* Debug */,
+				52E8F5571D6619990041A888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52E8F52D1D6619990041A888 /* Project object */;
+}
