@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
+		52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */; };
+		52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853E1D6BA43D00EB0247 /* ViewController.swift */; };
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
 		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
+		52A9853E1D6BA43D00EB0247 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52A985371D6B9D0400EB0247 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52A985381D6B9D1500EB0247 /* UIStoryboard.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		52A9853C1D6BA3FD00EB0247 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				52A9853E1D6BA43D00EB0247 /* ViewController.swift */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
 		52E8F52C1D6619990041A888 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +125,7 @@
 				52E8F5381D6619990041A888 /* AppDelegate.swift */,
 				52E8F53F1D6619990041A888 /* Assets.xcassets */,
 				52E8F55B1D661E5A0041A888 /* Controllers */,
+				52A985371D6B9D0400EB0247 /* Extensions */,
 				52E8F5441D6619990041A888 /* Info.plist */,
 				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
 				52E8F53C1D6619990041A888 /* Main.storyboard */,
@@ -110,6 +133,7 @@
 				52E8F55E1D6625B80041A888 /* Protocols */,
 				52E8F5611D6628420041A888 /* Providers */,
 				52E8F5661D662FA70041A888 /* Stores */,
+				52A9853C1D6BA3FD00EB0247 /* Types */,
 			);
 			path = WhackAPivotRedux;
 			sourceTree = "<group>";
@@ -183,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				52E8F56D1D6638A20041A888 /* Person.swift */,
+				52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -293,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */,
 				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
 				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
 				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
@@ -300,9 +326,11 @@
 				52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */,
 				52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */,
 				52E8F5701D663AFF0041A888 /* PeopleStoreType.swift in Sources */,
+				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
 				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
 				52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */,
 				52E8F5681D662FB90041A888 /* TokenStore.swift in Sources */,
+				52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

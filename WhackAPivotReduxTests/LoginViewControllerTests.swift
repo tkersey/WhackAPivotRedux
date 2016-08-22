@@ -15,8 +15,7 @@ class LoginViewControllerTests: XCTestCase {
         peopleStore = FakePeopleStore()
         tokenStore = FakeTokenStore()
 
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        controller = storyboard.instantiateViewController(withIdentifier: "LoginViewControllerIdentifier") as! LoginViewController
+        controller = UIStoryboard.loadViewController(viewControllerIdentifier: .login)
 
         controller.peopleStore = peopleStore
         controller.tokenStore = tokenStore
