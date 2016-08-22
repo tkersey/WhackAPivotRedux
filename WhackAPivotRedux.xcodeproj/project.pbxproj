@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
-		52E8F53B1D6619990041A888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* ViewController.swift */; };
+		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
 		52E8F5401D6619990041A888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53F1D6619990041A888 /* Assets.xcassets */; };
 		52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F5411D6619990041A888 /* LaunchScreen.storyboard */; };
-		52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */; };
+		52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */; };
+		52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F55F1D6625D70041A888 /* URLProviderType.swift */; };
+		52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5621D66285A0041A888 /* URLProvider.swift */; };
+		52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5641D662EED0041A888 /* TokenStoreType.swift */; };
+		52E8F5681D662FB90041A888 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5671D662FB90041A888 /* TokenStore.swift */; };
+		52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */; };
+		52E8F56E1D6638A20041A888 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56D1D6638A20041A888 /* Person.swift */; };
+		52E8F5701D663AFF0041A888 /* PeopleStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */; };
+		52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5711D663B420041A888 /* FakePeopleStore.swift */; };
+		52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5731D663EEC0041A888 /* PeopleStore.swift */; };
+		52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */; };
+		52E8F5781D6674030041A888 /* FakeViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +39,26 @@
 /* Begin PBXFileReference section */
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52E8F53A1D6619990041A888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52E8F53D1D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E8F53F1D6619990041A888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E8F5421D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E8F5441D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E8F5491D6619990041A888 /* WhackAPivotReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAPivotReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackAPivotReduxTests.swift; sourceTree = "<group>"; };
 		52E8F54F1D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E8F5581D661E030041A888 /* WhackAPivotReduxTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhackAPivotReduxTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		52E8F55F1D6625D70041A888 /* URLProviderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProviderType.swift; sourceTree = "<group>"; };
+		52E8F5621D66285A0041A888 /* URLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
+		52E8F5641D662EED0041A888 /* TokenStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStoreType.swift; sourceTree = "<group>"; };
+		52E8F5671D662FB90041A888 /* TokenStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTokenStore.swift; sourceTree = "<group>"; };
+		52E8F56D1D6638A20041A888 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStoreType.swift; sourceTree = "<group>"; };
+		52E8F5711D663B420041A888 /* FakePeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePeopleStore.swift; sourceTree = "<group>"; };
+		52E8F5731D663EEC0041A888 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
+		52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitioner.swift; sourceTree = "<group>"; };
+		52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeViewControllerTransitioner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +101,15 @@
 			isa = PBXGroup;
 			children = (
 				52E8F5381D6619990041A888 /* AppDelegate.swift */,
-				52E8F53A1D6619990041A888 /* ViewController.swift */,
-				52E8F53C1D6619990041A888 /* Main.storyboard */,
 				52E8F53F1D6619990041A888 /* Assets.xcassets */,
-				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52E8F55B1D661E5A0041A888 /* Controllers */,
 				52E8F5441D6619990041A888 /* Info.plist */,
+				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52E8F53C1D6619990041A888 /* Main.storyboard */,
+				52E8F56C1D6638790041A888 /* Models */,
+				52E8F55E1D6625B80041A888 /* Protocols */,
+				52E8F5611D6628420041A888 /* Providers */,
+				52E8F5661D662FA70041A888 /* Stores */,
 			);
 			path = WhackAPivotRedux;
 			sourceTree = "<group>";
@@ -90,10 +117,74 @@
 		52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */ = {
 			isa = PBXGroup;
 			children = (
-				52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */,
+				52E8F5691D6632E80041A888 /* Fakes */,
+				52E8F55D1D6625930041A888 /* Controllers */,
 				52E8F54F1D6619990041A888 /* Info.plist */,
+				52E8F5581D661E030041A888 /* WhackAPivotReduxTests-Bridging-Header.h */,
 			);
 			path = WhackAPivotReduxTests;
+			sourceTree = "<group>";
+		};
+		52E8F55B1D661E5A0041A888 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F53A1D6619990041A888 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52E8F55D1D6625930041A888 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52E8F55E1D6625B80041A888 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */,
+				52E8F5641D662EED0041A888 /* TokenStoreType.swift */,
+				52E8F55F1D6625D70041A888 /* URLProviderType.swift */,
+				52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		52E8F5611D6628420041A888 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5621D66285A0041A888 /* URLProvider.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		52E8F5661D662FA70041A888 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5731D663EEC0041A888 /* PeopleStore.swift */,
+				52E8F5671D662FB90041A888 /* TokenStore.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		52E8F5691D6632E80041A888 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5711D663B420041A888 /* FakePeopleStore.swift */,
+				52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */,
+				52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */,
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		52E8F56C1D6638790041A888 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F56D1D6638A20041A888 /* Person.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +243,7 @@
 					52E8F5481D6619990041A888 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78NNNKRM7Q;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 52E8F5341D6619990041A888;
 					};
@@ -201,8 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E8F53B1D6619990041A888 /* ViewController.swift in Sources */,
+				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
+				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
+				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
 				52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */,
+				52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */,
+				52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */,
+				52E8F5701D663AFF0041A888 /* PeopleStoreType.swift in Sources */,
+				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */,
+				52E8F5681D662FB90041A888 /* TokenStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */,
+				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
+				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,
+				52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */,
+				52E8F5781D6674030041A888 /* FakeViewControllerTransitioner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,11 +469,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78NNNKRM7Q;
 				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhackAPivotReduxTests/WhackAPivotReduxTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
 			};
@@ -381,11 +487,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78NNNKRM7Q;
 				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhackAPivotReduxTests/WhackAPivotReduxTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
 			};
@@ -410,6 +518,7 @@
 				52E8F5541D6619990041A888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52E8F5551D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotReduxTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +527,7 @@
 				52E8F5571D6619990041A888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
