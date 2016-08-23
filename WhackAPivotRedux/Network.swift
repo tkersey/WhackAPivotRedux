@@ -1,8 +1,8 @@
 import UIKit
 
 struct Network: NetworkType {
-    func request(with url: URL, success: @escaping ([String:AnyObject]?) -> Void, failure: @escaping (Error) -> Void) {
-        URLSession().dataTask(with: url) { data, urlResponse, error in
+    func request(with request: URLRequest, success: @escaping ([String:AnyObject]?) -> Void, failure: @escaping (Error) -> Void) {
+        URLSession().dataTask(with: request) { data, urlResponse, error in
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data) as? [String:AnyObject]
