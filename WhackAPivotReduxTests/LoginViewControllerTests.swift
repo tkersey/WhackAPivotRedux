@@ -39,7 +39,7 @@ class LoginViewControllerTests: XCTestCase {
     }
 
     func testWhenPeopleArePresentInPeopleStore() {
-        peopleStore.people = [Person(name: "", id: 0, image: UIImage())]
+        peopleStore.people = [Person(name: "", id: 0, image: UIImage(), locationName: "")]
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
 
