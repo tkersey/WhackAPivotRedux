@@ -15,8 +15,9 @@ class PeopleServiceTests: XCTestCase {
     ]
 
     let expectedPeople = [
-        Person(name: "First Person", id: 1121, image: UIImage()),
-        Person(name: "Second Person", id: 839, image: UIImage())
+        Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),
+        Person(name: "Aaron Hurley", id: 1379, image: UIImage(), locationName: "San Francisco"),
+        Person(name: "Second Person", id: 839, image: UIImage(), locationName: "Los Angeles")
     ]
 
     override func setUp() {
@@ -28,7 +29,7 @@ class PeopleServiceTests: XCTestCase {
         tokenStore.token = "FakeTokenString123"
 
         urlProvider = FakeURLProvider()
-        urlProvider.urlReturns(stubbedValues: URL(string: "http://example.com"))
+        urlProvider.peopleURLReturns(stubbedValues: URL(string: "http://example.com"))
 
         service = PeopleService(network: network, tokenStore: tokenStore, urlProvider: urlProvider)
         service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in })

@@ -11,11 +11,15 @@ struct PeopleService: PeopleServiceType {
             network.request(with: request, success: { data in
                 do {
                     let json = try JSONSerialization.jsonObject(with: data) as? [[String:AnyObject]]
-                } catch {
-
-                }
-                }, failure: { error in
-            })
+                    var people = [Person]()
+                    json?.forEach { person in
+                        if let person = Person(json: person) {
+                            people.append(person)
+                        }
+                    }
+                    success(people)
+                } catch {}
+                }, failure: failure)
         }
     }
 }
