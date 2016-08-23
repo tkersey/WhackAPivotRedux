@@ -13,6 +13,7 @@
 		52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABBE1D6CB40F00349460 /* NetworkType.swift */; };
 		52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC01D6CB4F700349460 /* FakeNetwork.swift */; };
 		52CFABC41D6CBF5500349460 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC31D6CBF5500349460 /* Network.swift */; };
+		52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */; };
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
 		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		52CFABBE1D6CB40F00349460 /* NetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
 		52CFABC01D6CB4F700349460 /* FakeNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetwork.swift; sourceTree = "<group>"; };
 		52CFABC31D6CBF5500349460 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLProvider.swift; sourceTree = "<group>"; };
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				52CFABC01D6CB4F700349460 /* FakeNetwork.swift */,
 				52E8F5711D663B420041A888 /* FakePeopleStore.swift */,
 				52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */,
+				52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */,
 				52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */,
 			);
 			name = Fakes;
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */,
+				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
 				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
 				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,
 				52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */,
