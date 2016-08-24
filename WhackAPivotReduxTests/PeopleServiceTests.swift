@@ -32,7 +32,7 @@ class PeopleServiceTests: XCTestCase {
         service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in })
 
         let exampleData = try! JSONSerialization.data(withJSONObject: examplePeople, options: .prettyPrinted)
-        network.requestArgsForCall(callIndex: 0).1(exampleData)
+        network.requestArgsForCall(0).1(exampleData)
 
         let expectedPeople = [
             Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),
@@ -49,7 +49,7 @@ class PeopleServiceTests: XCTestCase {
         }
 
         let exampleData = try! JSONSerialization.data(withJSONObject: examplePeople, options: .prettyPrinted)
-        network.requestArgsForCall(callIndex: 0).1(exampleData)
+        network.requestArgsForCall(0).1(exampleData)
 
         let expectedPeople = [
             Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),

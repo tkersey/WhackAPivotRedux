@@ -10,7 +10,7 @@ class FakeURLProvider: URLProviderType {
             return stubbedValues
         }
     }
-    func urlArgsForCall(callIndex: Int) -> (String) {
+    func urlArgsForCall(_ callIndex: Int) -> (String) {
         return self.urlArgs[callIndex]
     }
     func url(forPath path: String) -> URL? {
