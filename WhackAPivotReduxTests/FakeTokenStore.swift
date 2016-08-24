@@ -1,6 +1,6 @@
 @testable import WhackAPivotRedux
 
-class FakeTokenStore: TokenStoreType {
+class FakeTokenStore: TokenStoreType, Equatable {
     init() {
         self.set_tokenArgs = []
     }
@@ -17,5 +17,9 @@ class FakeTokenStore: TokenStoreType {
             _token = newValue
             set_tokenArgs.append(newValue)
         }
+    }
+
+    static func ==(lhs: FakeTokenStore, rhs: FakeTokenStore) -> Bool {
+        return lhs == rhs
     }
 }

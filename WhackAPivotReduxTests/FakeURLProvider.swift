@@ -1,7 +1,7 @@
 import Foundation
 @testable import WhackAPivotRedux
 
-class FakeURLProvider: URLProviderType {
+class FakeURLProvider: URLProviderType, Equatable {
     private(set) var urlCallCount: Int = 0
     var urlStub: ((String) -> (URL?))?
     private var urlArgs: Array<(String)> = []
@@ -27,5 +27,9 @@ class FakeURLProvider: URLProviderType {
     func peopleURL() -> URL? {
         self.peopleURLCallCount += 1
         return self.poepleURLStub!()
+    }
+
+    static func ==(lhs: FakeURLProvider, rhs: FakeURLProvider) -> Bool {
+        return lhs == rhs
     }
 }

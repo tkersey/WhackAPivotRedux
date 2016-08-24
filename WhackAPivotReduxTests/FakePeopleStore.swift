@@ -1,6 +1,6 @@
 @testable import WhackAPivotRedux
 
-class FakePeopleStore: PeopleStoreType {
+class FakePeopleStore: PeopleStoreType, Equatable {
     init() {
         self._people = []
         self.set_peopleArgs = []
@@ -18,5 +18,9 @@ class FakePeopleStore: PeopleStoreType {
             _people = newValue
             set_peopleArgs.append(newValue)
         }
+    }
+
+    static func ==(lhs: FakePeopleStore, rhs: FakePeopleStore) -> Bool {
+        return lhs == rhs
     }
 }
