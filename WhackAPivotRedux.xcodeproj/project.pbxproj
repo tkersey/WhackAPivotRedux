@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522184071D6E1C3900A9D80A /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184061D6E1C3900A9D80A /* PeopleViewController.swift */; };
+		522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */; };
+		5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221840A1D6E1D4D00A9D80A /* People.storyboard */; };
 		525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */; };
 		525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1471D6BB087003B9839 /* FakePeopleService.swift */; };
 		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		522184061D6E1C3900A9D80A /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerTests.swift; sourceTree = "<group>"; };
+		5221840A1D6E1D4D00A9D80A /* People.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
 		525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceType.swift; sourceTree = "<group>"; };
 		525BE1471D6BB087003B9839 /* FakePeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePeopleService.swift; sourceTree = "<group>"; };
 		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			children = (
 				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
 				52E8F53C1D6619990041A888 /* Main.storyboard */,
+				5221840A1D6E1D4D00A9D80A /* People.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				52E8F53A1D6619990041A888 /* LoginViewController.swift */,
+				522184061D6E1C3900A9D80A /* PeopleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */,
+				522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */,
+				5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */,
 				52E8F5401D6619990041A888 /* Assets.xcassets in Resources */,
 				52E8F53E1D6619990041A888 /* Main.storyboard in Resources */,
 			);
@@ -371,6 +381,7 @@
 				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
 				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
 				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
+				522184071D6E1C3900A9D80A /* PeopleViewController.swift in Sources */,
 				52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */,
 				52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */,
 				52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */,
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */,
 				525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */,
 				52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */,
 				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
