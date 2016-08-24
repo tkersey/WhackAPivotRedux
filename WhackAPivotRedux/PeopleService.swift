@@ -5,7 +5,7 @@ struct PeopleService: PeopleServiceType {
     var tokenStore: TokenStoreType!
     var urlProvider: URLProviderType!
 
-    func getPeople(success: @escaping ([Person]) -> Void, failure: @escaping (Error) -> Void) {
+    func getPeople(success: @escaping ([Person]) -> Void, failure: @escaping (Error) -> Void, filter: @escaping (Person) -> Bool = { _ in true }) {
         if let url = urlProvider.peopleURL() {
             let request = URLRequest(url: url)
             network.request(with: request, success: { data in
@@ -13,7 +13,7 @@ struct PeopleService: PeopleServiceType {
                     let json = try JSONSerialization.jsonObject(with: data) as? [[String:AnyObject]]
                     var people = [Person]()
                     json?.forEach { person in
-                        if let person = Person(json: person) {
+                        if let person = Person(json: person), filter(person) {
                             people.append(person)
                         }
                     }
