@@ -101,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522184051D6E1BF600A9D80A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52E8F53C1D6619990041A888 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		525BE1491D6BB6A4003B9839 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,13 +169,12 @@
 				52E8F55B1D661E5A0041A888 /* Controllers */,
 				52A985371D6B9D0400EB0247 /* Extensions */,
 				52E8F5441D6619990041A888 /* Info.plist */,
-				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
-				52E8F53C1D6619990041A888 /* Main.storyboard */,
 				52E8F56C1D6638790041A888 /* Models */,
 				52E8F55E1D6625B80041A888 /* Protocols */,
 				52E8F5611D6628420041A888 /* Providers */,
 				52CFABC21D6CBF3E00349460 /* Services */,
 				52E8F5661D662FA70041A888 /* Stores */,
+				522184051D6E1BF600A9D80A /* Storyboards */,
 				52A9853C1D6BA3FD00EB0247 /* Types */,
 			);
 			path = WhackAPivotRedux;
