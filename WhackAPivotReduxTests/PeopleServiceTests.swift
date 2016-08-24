@@ -24,10 +24,11 @@ class PeopleServiceTests: XCTestCase {
 
         urlProvider = FakeURLProvider()
         urlProvider.peopleURLReturns(stubbedValues: URL(string: "http://example.com"))
+
+        service = PeopleService(network: network, tokenStore: tokenStore, urlProvider: urlProvider)
     }
 
     func testSuccess() {
-        service = PeopleService(network: network, tokenStore: tokenStore, urlProvider: urlProvider)
         service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in })
 
         let exampleData = try! JSONSerialization.data(withJSONObject: examplePeople, options: .prettyPrinted)
@@ -43,7 +44,6 @@ class PeopleServiceTests: XCTestCase {
     }
 
     func testFilteredSuccess() {
-        service = PeopleService(network: network, tokenStore: tokenStore, urlProvider: urlProvider)
         service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in }) { person in
             person.locationName == "Los Angeles"
         }
@@ -57,5 +57,17 @@ class PeopleServiceTests: XCTestCase {
         ]
 
         XCTAssertEqual(expectedPeople, returnedPeople)
+    }
+
+    func testFailureToHaveToken() {
+        tokenStore.token = nil
+
+        var successCalled = false
+        var failureCalled = false
+
+        service.getPeople(success: { _ in successCalled = true }, failure: { _ in failureCalled = true })
+
+        XCTAssertFalse(successCalled)
+        XCTAssert(failureCalled)
     }
 }

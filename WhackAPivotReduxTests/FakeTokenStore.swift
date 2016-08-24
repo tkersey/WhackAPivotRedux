@@ -2,7 +2,6 @@
 
 class FakeTokenStore: TokenStoreType {
     init() {
-        self._token = ""
         self.set_tokenArgs = []
     }
 
@@ -11,7 +10,7 @@ class FakeTokenStore: TokenStoreType {
 
     var token: String? {
         get {
-            return _token!
+            return _token
         }
 
         set {

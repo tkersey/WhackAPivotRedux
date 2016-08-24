@@ -80,6 +80,6 @@ class LoginViewControllerTests: XCTestCase {
     func testNotSavingTokenWhenAuthTokenIsNotPresent() {
         controller.webview.load(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
         controller.webView(controller.webview, didFinish: nil)
-        XCTAssert(controller.tokenStore.token!.isEmpty)
+        XCTAssertNil(controller.tokenStore.token)
     }
 }
