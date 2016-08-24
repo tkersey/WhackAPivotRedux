@@ -10,6 +10,13 @@
 		522184071D6E1C3900A9D80A /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184061D6E1C3900A9D80A /* PeopleViewController.swift */; };
 		522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */; };
 		5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221840A1D6E1D4D00A9D80A /* People.storyboard */; };
+		5221840D1D6E3D5100A9D80A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221840C1D6E3D5100A9D80A /* Challenge.swift */; };
+		5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */; };
+		522184111D6E40E700A9D80A /* FakeChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184101D6E40E700A9D80A /* FakeChallengeService.swift */; };
+		522184131D6E456900A9D80A /* RandomizerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184121D6E456900A9D80A /* RandomizerType.swift */; };
+		522184151D6E4B5A00A9D80A /* FakeRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */; };
+		522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184171D6E4E2C00A9D80A /* RandomizerTests.swift */; };
+		5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221841A1D6E4EEB00A9D80A /* Randomizer.swift */; };
 		525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */; };
 		525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1471D6BB087003B9839 /* FakePeopleService.swift */; };
 		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
@@ -54,6 +61,13 @@
 		522184061D6E1C3900A9D80A /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerTests.swift; sourceTree = "<group>"; };
 		5221840A1D6E1D4D00A9D80A /* People.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
+		5221840C1D6E3D5100A9D80A /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeServiceType.swift; sourceTree = "<group>"; };
+		522184101D6E40E700A9D80A /* FakeChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeChallengeService.swift; sourceTree = "<group>"; };
+		522184121D6E456900A9D80A /* RandomizerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerType.swift; sourceTree = "<group>"; };
+		522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRandomizer.swift; sourceTree = "<group>"; };
+		522184171D6E4E2C00A9D80A /* RandomizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerTests.swift; sourceTree = "<group>"; };
+		5221841A1D6E4EEB00A9D80A /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceType.swift; sourceTree = "<group>"; };
 		525BE1471D6BB087003B9839 /* FakePeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePeopleService.swift; sourceTree = "<group>"; };
 		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -115,6 +129,22 @@
 				5221840A1D6E1D4D00A9D80A /* People.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		522184161D6E4E1200A9D80A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				522184171D6E4E2C00A9D80A /* RandomizerTests.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		522184191D6E4EDE00A9D80A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5221841A1D6E4EEB00A9D80A /* Randomizer.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		525BE1491D6BB6A4003B9839 /* Services */ = {
@@ -183,6 +213,7 @@
 				52E8F5661D662FA70041A888 /* Stores */,
 				522184051D6E1BF600A9D80A /* Storyboards */,
 				52A9853C1D6BA3FD00EB0247 /* Types */,
+				522184191D6E4EDE00A9D80A /* Utilities */,
 			);
 			path = WhackAPivotRedux;
 			sourceTree = "<group>";
@@ -194,6 +225,7 @@
 				52E8F5691D6632E80041A888 /* Fakes */,
 				52E8F54F1D6619990041A888 /* Info.plist */,
 				525BE1491D6BB6A4003B9839 /* Services */,
+				522184161D6E4E1200A9D80A /* Utilities */,
 				52E8F5581D661E030041A888 /* WhackAPivotReduxTests-Bridging-Header.h */,
 			);
 			path = WhackAPivotReduxTests;
@@ -220,9 +252,11 @@
 		52E8F55E1D6625B80041A888 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */,
 				52CFABBE1D6CB40F00349460 /* NetworkType.swift */,
 				525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */,
 				52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */,
+				522184121D6E456900A9D80A /* RandomizerType.swift */,
 				52E8F5641D662EED0041A888 /* TokenStoreType.swift */,
 				52E8F55F1D6625D70041A888 /* URLProviderType.swift */,
 				52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */,
@@ -250,9 +284,11 @@
 		52E8F5691D6632E80041A888 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				522184101D6E40E700A9D80A /* FakeChallengeService.swift */,
 				52CFABC01D6CB4F700349460 /* FakeNetwork.swift */,
 				525BE1471D6BB087003B9839 /* FakePeopleService.swift */,
 				52E8F5711D663B420041A888 /* FakePeopleStore.swift */,
+				522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */,
 				52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */,
 				52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */,
 				52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */,
@@ -263,6 +299,7 @@
 		52E8F56C1D6638790041A888 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5221840C1D6E3D5100A9D80A /* Challenge.swift */,
 				52E8F56D1D6638A20041A888 /* Person.swift */,
 				52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */,
 			);
@@ -376,8 +413,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5221840D1D6E3D5100A9D80A /* Challenge.swift in Sources */,
 				52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */,
 				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
+				5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */,
+				522184131D6E456900A9D80A /* RandomizerType.swift in Sources */,
 				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
 				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
 				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
@@ -389,6 +429,7 @@
 				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
 				52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */,
 				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */,
 				525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */,
 				52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */,
 				52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */,
@@ -401,10 +442,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522184111D6E40E700A9D80A /* FakeChallengeService.swift in Sources */,
 				522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */,
+				522184151D6E4B5A00A9D80A /* FakeRandomizer.swift in Sources */,
 				525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */,
 				52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */,
 				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
+				522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */,
 				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
 				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,
 				52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */,
