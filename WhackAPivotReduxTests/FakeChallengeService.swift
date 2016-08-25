@@ -12,11 +12,11 @@ class FakeChallengeService: ChallengeServiceType {
     }
 
     private(set) var getChallengeCallCount: Int = 0
-    var getChallengeStub: (() -> Challenge<Person>?)?
-    func getChallengeReturns(stubbedValues: Challenge<Person>?) {
-        self.getChallengeStub = { return stubbedValues }
+    var getChallengeStub: (() -> Challenge?)?
+    func getChallengeReturns(stubbedValues: Challenge?) {
+        self.getChallengeStub = { return stubbedValues! }
     }
-    func getChallenge() -> Challenge<Person>? {
+    func getChallenge() -> Challenge? {
         self.getChallengeCallCount += 1
         return self.getChallengeStub!()
     }

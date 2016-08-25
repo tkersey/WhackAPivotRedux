@@ -1,5 +1,5 @@
-struct Challenge<E>: Equatable where E: Hashable {
-    let choices: [E]
+struct Challenge {
+    let choices: [Person]
     let target: Int
 
     static func ==(lhs: Challenge, rhs: Challenge) -> Bool {
