@@ -1,4 +1,4 @@
 protocol ChallengeServiceType {
-    func newGame(people: [Person], perChallenge: Int)
-    func getChallenge() -> Challenge?
+    mutating func newGame(people: [Person], perChallenge: Int)
+    mutating func getChallenge() -> Challenge?
 }

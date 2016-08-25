@@ -22,6 +22,8 @@
 		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
 		52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */; };
 		52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853E1D6BA43D00EB0247 /* ViewController.swift */; };
+		52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7007A1D6F509B00136672 /* ChallengeService.swift */; };
+		52B7007D1D6F511D00136672 /* ChallengeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */; };
 		52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABBE1D6CB40F00349460 /* NetworkType.swift */; };
 		52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC01D6CB4F700349460 /* FakeNetwork.swift */; };
 		52CFABC41D6CBF5500349460 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC31D6CBF5500349460 /* Network.swift */; };
@@ -73,6 +75,8 @@
 		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
 		52A9853E1D6BA43D00EB0247 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B7007A1D6F509B00136672 /* ChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
+		52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeServiceTests.swift; sourceTree = "<group>"; };
 		52CFABBE1D6CB40F00349460 /* NetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
 		52CFABC01D6CB4F700349460 /* FakeNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetwork.swift; sourceTree = "<group>"; };
 		52CFABC31D6CBF5500349460 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		525BE1491D6BB6A4003B9839 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */,
 				52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */,
 			);
 			name = Services;
@@ -174,6 +179,7 @@
 		52CFABC21D6CBF3E00349460 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52B7007A1D6F509B00136672 /* ChallengeService.swift */,
 				52CFABC31D6CBF5500349460 /* Network.swift */,
 				52CFABC71D6CCA3600349460 /* PeopleService.swift */,
 			);
@@ -429,6 +435,7 @@
 				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
 				52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */,
 				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */,
 				5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */,
 				525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */,
 				52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */,
@@ -448,6 +455,7 @@
 				525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */,
 				52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */,
 				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
+				52B7007D1D6F511D00136672 /* ChallengeServiceTests.swift in Sources */,
 				522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */,
 				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
 				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,

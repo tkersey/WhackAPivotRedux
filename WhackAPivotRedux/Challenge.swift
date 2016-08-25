@@ -1,4 +1,4 @@
-struct Challenge {
+struct Challenge: Equatable {
     let choices: [Person]
     let target: Int
 
