@@ -30,6 +30,9 @@
 		52CFABC61D6CC77700349460 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */; };
 		52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC71D6CCA3600349460 /* PeopleService.swift */; };
 		52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */; };
+		52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */; };
+		52DA7A701D6F670400816314 /* FakePersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */; };
+		52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A721D6F6A8700816314 /* PersonPresenter.swift */; };
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
 		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
@@ -83,6 +86,9 @@
 		52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
 		52CFABC71D6CCA3600349460 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLProvider.swift; sourceTree = "<group>"; };
+		52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenterType.swift; sourceTree = "<group>"; };
+		52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePersonPresenter.swift; sourceTree = "<group>"; };
+		52DA7A721D6F6A8700816314 /* PersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenter.swift; sourceTree = "<group>"; };
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,14 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		52DA7A711D6F6A6E00816314 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				52DA7A721D6F6A8700816314 /* PersonPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
 		52E8F52C1D6619990041A888 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +227,7 @@
 				52A985371D6B9D0400EB0247 /* Extensions */,
 				52E8F5441D6619990041A888 /* Info.plist */,
 				52E8F56C1D6638790041A888 /* Models */,
+				52DA7A711D6F6A6E00816314 /* Presenters */,
 				52E8F55E1D6625B80041A888 /* Protocols */,
 				52E8F5611D6628420041A888 /* Providers */,
 				52CFABC21D6CBF3E00349460 /* Services */,
@@ -262,6 +277,7 @@
 				52CFABBE1D6CB40F00349460 /* NetworkType.swift */,
 				525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */,
 				52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */,
+				52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */,
 				522184121D6E456900A9D80A /* RandomizerType.swift */,
 				52E8F5641D662EED0041A888 /* TokenStoreType.swift */,
 				52E8F55F1D6625D70041A888 /* URLProviderType.swift */,
@@ -298,6 +314,7 @@
 				52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */,
 				52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */,
 				52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */,
+				52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -424,6 +441,7 @@
 				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
 				5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */,
 				522184131D6E456900A9D80A /* RandomizerType.swift in Sources */,
+				52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */,
 				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
 				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
 				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
@@ -435,6 +453,7 @@
 				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
 				52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */,
 				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */,
 				52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */,
 				5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */,
 				525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */,
@@ -457,6 +476,7 @@
 				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
 				52B7007D1D6F511D00136672 /* ChallengeServiceTests.swift in Sources */,
 				522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */,
+				52DA7A701D6F670400816314 /* FakePersonPresenter.swift in Sources */,
 				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
 				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,
 				52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */,
