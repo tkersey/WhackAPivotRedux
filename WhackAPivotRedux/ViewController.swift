@@ -1,5 +1,5 @@
 enum ViewController: ViewControllerIdentifier {
     case game = "Game::GameViewControllerIdentifier"
-    case login = "Main::LoginViewControllerIdentifier"
+    case login = "Login::LoginViewControllerIdentifier"
     case people = "People::PeopleViewControllerIdentifier"
 }
