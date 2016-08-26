@@ -14,7 +14,7 @@ class FakeChallengeService: ChallengeServiceType {
     private(set) var getChallengeCallCount: Int = 0
     var getChallengeStub: (() -> Challenge?)?
     func getChallengeReturns(stubbedValues: Challenge?) {
-        self.getChallengeStub = { return stubbedValues! }
+        self.getChallengeStub = { return stubbedValues }
     }
     func getChallenge() -> Challenge? {
         self.getChallengeCallCount += 1

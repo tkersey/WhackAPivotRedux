@@ -33,6 +33,9 @@
 		52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */; };
 		52DA7A701D6F670400816314 /* FakePersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */; };
 		52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A721D6F6A8700816314 /* PersonPresenter.swift */; };
+		52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A741D6F8FFF00816314 /* GameViewController.swift */; };
+		52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A761D6F902600816314 /* GameViewControllerTests.swift */; };
+		52DA7A791D6F906400816314 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A781D6F906400816314 /* Game.storyboard */; };
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
 		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
@@ -89,6 +92,9 @@
 		52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenterType.swift; sourceTree = "<group>"; };
 		52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePersonPresenter.swift; sourceTree = "<group>"; };
 		52DA7A721D6F6A8700816314 /* PersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenter.swift; sourceTree = "<group>"; };
+		52DA7A741D6F8FFF00816314 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		52DA7A761D6F902600816314 /* GameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerTests.swift; sourceTree = "<group>"; };
+		52DA7A781D6F906400816314 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 		522184051D6E1BF600A9D80A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				52DA7A781D6F906400816314 /* Game.storyboard */,
 				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
 				52E8F53C1D6619990041A888 /* Main.storyboard */,
 				5221840A1D6E1D4D00A9D80A /* People.storyboard */,
@@ -255,6 +262,7 @@
 		52E8F55B1D661E5A0041A888 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52DA7A741D6F8FFF00816314 /* GameViewController.swift */,
 				52E8F53A1D6619990041A888 /* LoginViewController.swift */,
 				522184061D6E1C3900A9D80A /* PeopleViewController.swift */,
 			);
@@ -264,6 +272,7 @@
 		52E8F55D1D6625930041A888 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52DA7A761D6F902600816314 /* GameViewControllerTests.swift */,
 				52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */,
 				522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */,
 			);
@@ -418,6 +427,7 @@
 				52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */,
 				5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */,
 				52E8F5401D6619990041A888 /* Assets.xcassets in Resources */,
+				52DA7A791D6F906400816314 /* Game.storyboard in Resources */,
 				52E8F53E1D6619990041A888 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +450,7 @@
 				52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */,
 				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
 				5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */,
+				52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */,
 				522184131D6E456900A9D80A /* RandomizerType.swift in Sources */,
 				52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */,
 				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
@@ -469,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				522184111D6E40E700A9D80A /* FakeChallengeService.swift in Sources */,
+				52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */,
 				522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */,
 				522184151D6E4B5A00A9D80A /* FakeRandomizer.swift in Sources */,
 				525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */,
