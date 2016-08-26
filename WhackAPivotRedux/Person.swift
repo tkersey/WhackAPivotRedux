@@ -7,9 +7,7 @@ struct Person : Hashable {
     let locationName: String
 
     var hashValue: Int {
-        get {
-            return "\(id)\(name)".hashValue
-        }
+        return "\(id)\(name)".hashValue
     }
 
     init(name: String, id: Int, locationName: String, image: UIImage? = nil) {
@@ -35,7 +33,7 @@ extension Person {
         if let photoURL = json["photo_url"] as? String, let imageURL = URL(string: photoURL), let data = try? Data(contentsOf: imageURL), let image = UIImage(data: data) {
             self.image = image
         } else {
-            self.image = UIImage()
+            self.image = #imageLiteral(resourceName: "placeholder")
         }
     }
 }
