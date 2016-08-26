@@ -6,9 +6,9 @@ class RandomizerTests: XCTestCase {
     var challenge: Challenge!
 
     let people = [
-        Person(name: "P1", id: 0, image: UIImage(), locationName: ""),
-        Person(name: "P2", id: 0, image: UIImage(), locationName: ""),
-        Person(name: "P3", id: 0, image: UIImage(), locationName: "")
+        Person(name: "P1", id: 0, locationName: ""),
+        Person(name: "P2", id: 1, locationName: ""),
+        Person(name: "P3", id: 2, locationName: "")
     ]
 
     override func setUp() {

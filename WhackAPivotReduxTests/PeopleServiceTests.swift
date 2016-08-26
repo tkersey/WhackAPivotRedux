@@ -35,9 +35,9 @@ class PeopleServiceTests: XCTestCase {
         network.requestArgsForCall(0).1(exampleData)
 
         let expectedPeople = [
-            Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),
-            Person(name: "Aaron Hurley", id: 1379, image: UIImage(), locationName: "San Francisco"),
-            Person(name: "Second Person", id: 839, image: UIImage(), locationName: "Los Angeles")
+            Person(name: "First Person", id: 1121, locationName: "Los Angeles"),
+            Person(name: "Aaron Hurley", id: 1379, locationName: "San Francisco"),
+            Person(name: "Second Person", id: 839, locationName: "Los Angeles")
         ]
 
         XCTAssertEqual(expectedPeople, returnedPeople)
@@ -52,8 +52,8 @@ class PeopleServiceTests: XCTestCase {
         network.requestArgsForCall(0).1(exampleData)
 
         let expectedPeople = [
-            Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),
-            Person(name: "Second Person", id: 839, image: UIImage(), locationName: "Los Angeles")
+            Person(name: "First Person", id: 1121, locationName: "Los Angeles"),
+            Person(name: "Second Person", id: 839, locationName: "Los Angeles")
         ]
 
         XCTAssertEqual(expectedPeople, returnedPeople)

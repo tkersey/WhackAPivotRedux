@@ -8,15 +8,15 @@ class ChallengeServiceTests: XCTestCase {
     var stubbedChallenge: Challenge!
 
     let people = [
-        Person(name: "Joe", id: 0, image: UIImage(), locationName: ""),
-        Person(name: "Steve", id: 1, image: UIImage(), locationName: ""),
-        Person(name: "Steve2", id: 2, image: UIImage(), locationName: ""),
-        Person(name: "Steve3", id: 3, image: UIImage(), locationName: ""),
-        Person(name: "Steve4", id: 4, image: UIImage(), locationName: ""),
-        Person(name: "Steve5", id: 5, image: UIImage(), locationName: ""),
-        Person(name: "Steve6", id: 6, image: UIImage(), locationName: ""),
-        Person(name: "Steve7", id: 7, image: UIImage(), locationName: ""),
-        Person(name: "Steve8", id: 8, image: UIImage(), locationName: "")
+        Person(name: "Joe", id: 0, locationName: ""),
+        Person(name: "Steve", id: 1, locationName: ""),
+        Person(name: "Steve2", id: 2, locationName: ""),
+        Person(name: "Steve3", id: 3, locationName: ""),
+        Person(name: "Steve4", id: 4, locationName: ""),
+        Person(name: "Steve5", id: 5, locationName: ""),
+        Person(name: "Steve6", id: 6, locationName: ""),
+        Person(name: "Steve7", id: 7, locationName: ""),
+        Person(name: "Steve8", id: 8, locationName: "")
     ]
 
     override func setUp() {

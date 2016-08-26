@@ -9,21 +9,21 @@ class GameViewControllerTests: XCTestCase {
     var store: FakePeopleStore!
 
     let people = [
-        Person(name: "Joe", id: 0, image: UIImage(), locationName: ""),
-        Person(name: "Steve", id: 1, image: UIImage(), locationName: ""),
-        Person(name: "Steve2", id: 2, image: UIImage(), locationName: ""),
-        Person(name: "Steve3", id: 3, image: UIImage(), locationName: ""),
-        Person(name: "Steve4", id: 4, image: UIImage(), locationName: ""),
-        Person(name: "Steve5", id: 5, image: UIImage(), locationName: "")
+        Person(name: "Joe", id: 0, locationName: ""),
+        Person(name: "Steve", id: 1, locationName: ""),
+        Person(name: "Steve2", id: 2, locationName: ""),
+        Person(name: "Steve3", id: 3, locationName: ""),
+        Person(name: "Steve4", id: 4, locationName: ""),
+        Person(name: "Steve5", id: 5, locationName: "")
     ]
 
     let morePeople = [
-        Person(name: "Joe7", id: 7, image: UIImage(), locationName: ""),
-        Person(name: "Steve7", id: 70, image: UIImage(), locationName: ""),
-        Person(name: "Steve27", id: 27, image: UIImage(), locationName: ""),
-        Person(name: "Steve37", id: 37, image: UIImage(), locationName: ""),
-        Person(name: "Steve47", id: 47, image: UIImage(), locationName: ""),
-        Person(name: "Steve57", id: 57, image: UIImage(), locationName: "")
+        Person(name: "Joe7", id: 7, locationName: ""),
+        Person(name: "Steve7", id: 70, locationName: ""),
+        Person(name: "Steve27", id: 27, locationName: ""),
+        Person(name: "Steve37", id: 37, locationName: ""),
+        Person(name: "Steve47", id: 47, locationName: ""),
+        Person(name: "Steve57", id: 57, locationName: "")
     ]
 
     override func setUp() {

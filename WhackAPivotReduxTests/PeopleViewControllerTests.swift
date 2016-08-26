@@ -8,8 +8,8 @@ class PeopleViewControllerTests: XCTestCase {
     var peopleStore: FakePeopleStore!
 
     let expectedPeople = [
-        Person(name: "First Person", id: 1121, image: UIImage(), locationName: "Los Angeles"),
-        Person(name: "Second Person", id: 839, image: UIImage(), locationName: "Los Angeles")
+        Person(name: "First Person", id: 1121, locationName: "Los Angeles"),
+        Person(name: "Second Person", id: 839, locationName: "Los Angeles")
     ]
 
     override func setUp() {

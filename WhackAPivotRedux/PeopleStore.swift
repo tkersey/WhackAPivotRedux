@@ -11,7 +11,7 @@ class PeopleStore: PeopleStoreType {
                     let json = try JSONSerialization.jsonObject(with: data) as? [[String:AnyObject]]
                     json?.forEach { dict in
                         if let id = dict["id"] as? Int, let image = UIImage(contentsOfFile: "\(documentsPath)/\(id).png"), let name = dict["name"] as? String, let locationName = dict["location_name"] as? String {
-                            _people.append(Person(name: name, id: id, image: image, locationName: locationName))
+                            _people.append(Person(name: name, id: id, locationName: locationName, image: image))
                         }
                     }
                 } catch {

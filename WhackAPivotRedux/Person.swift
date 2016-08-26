@@ -12,6 +12,13 @@ struct Person : Hashable {
         }
     }
 
+    init(name: String, id: Int, locationName: String, image: UIImage? = nil) {
+        self.name = name
+        self.id = id
+        self.image = image ?? #imageLiteral(resourceName: "placeholder")
+        self.locationName = locationName
+    }
+
     static func ==(lhs: Person, rhs: Person) -> Bool {
         return lhs.name == rhs.name && lhs.id == rhs.id && lhs.locationName == rhs.locationName
     }
