@@ -21,7 +21,7 @@ extension PeopleViewController {
             self.peopleStore.people = people
             self.viewControllerTransitioner.performSegue(withIdentifier: "segueToGame", sender: self)
             }, failure: { _ in
-                self.viewControllerTransitioner.performSegue(withIdentifier: "segueToLogin", sender: self)
+                self.viewControllerTransitioner.dismiss(animated: true, completion: nil)
             }, filter: { $0.locationName == "Los Angeles" })
     }
 }

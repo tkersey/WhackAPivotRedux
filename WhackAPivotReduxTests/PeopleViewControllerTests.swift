@@ -44,7 +44,7 @@ class PeopleViewControllerTests: XCTestCase {
 
         XCTAssert(peopleStore.people!.isEmpty)
 
-        XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
-        XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "segueToLogin")
+        XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 0)
+        XCTAssertEqual(viewControllerTransitioner.dismissCallCount, 1)
     }
 }
