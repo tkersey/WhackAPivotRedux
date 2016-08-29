@@ -7,12 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522184071D6E1C3900A9D80A /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184061D6E1C3900A9D80A /* PeopleViewController.swift */; };
+		522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */; };
+		5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221840A1D6E1D4D00A9D80A /* People.storyboard */; };
+		5221840D1D6E3D5100A9D80A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221840C1D6E3D5100A9D80A /* Challenge.swift */; };
+		5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */; };
+		522184111D6E40E700A9D80A /* FakeChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184101D6E40E700A9D80A /* FakeChallengeService.swift */; };
+		522184131D6E456900A9D80A /* RandomizerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184121D6E456900A9D80A /* RandomizerType.swift */; };
+		522184151D6E4B5A00A9D80A /* FakeRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */; };
+		522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522184171D6E4E2C00A9D80A /* RandomizerTests.swift */; };
+		5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221841A1D6E4EEB00A9D80A /* Randomizer.swift */; };
+		525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */; };
+		525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BE1471D6BB087003B9839 /* FakePeopleService.swift */; };
+		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
+		52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */; };
+		52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853E1D6BA43D00EB0247 /* ViewController.swift */; };
+		52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7007A1D6F509B00136672 /* ChallengeService.swift */; };
+		52B7007D1D6F511D00136672 /* ChallengeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */; };
+		52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABBE1D6CB40F00349460 /* NetworkType.swift */; };
+		52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC01D6CB4F700349460 /* FakeNetwork.swift */; };
+		52CFABC41D6CBF5500349460 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC31D6CBF5500349460 /* Network.swift */; };
+		52CFABC61D6CC77700349460 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */; };
+		52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC71D6CCA3600349460 /* PeopleService.swift */; };
+		52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */; };
+		52D4A6781D70F78C00B78EB5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D4A6771D70F78C00B78EB5 /* Login.storyboard */; };
+		52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */; };
+		52DA7A701D6F670400816314 /* FakePersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */; };
+		52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A721D6F6A8700816314 /* PersonPresenter.swift */; };
+		52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A741D6F8FFF00816314 /* GameViewController.swift */; };
+		52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A761D6F902600816314 /* GameViewControllerTests.swift */; };
+		52DA7A791D6F906400816314 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A781D6F906400816314 /* Game.storyboard */; };
 		52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5381D6619990041A888 /* AppDelegate.swift */; };
-		52E8F53B1D6619990041A888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* ViewController.swift */; };
-		52E8F53E1D6619990041A888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53C1D6619990041A888 /* Main.storyboard */; };
+		52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F53A1D6619990041A888 /* LoginViewController.swift */; };
 		52E8F5401D6619990041A888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F53F1D6619990041A888 /* Assets.xcassets */; };
 		52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E8F5411D6619990041A888 /* LaunchScreen.storyboard */; };
-		52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */; };
+		52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */; };
+		52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F55F1D6625D70041A888 /* URLProviderType.swift */; };
+		52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5621D66285A0041A888 /* URLProvider.swift */; };
+		52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5641D662EED0041A888 /* TokenStoreType.swift */; };
+		52E8F5681D662FB90041A888 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5671D662FB90041A888 /* TokenStore.swift */; };
+		52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */; };
+		52E8F56E1D6638A20041A888 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56D1D6638A20041A888 /* Person.swift */; };
+		52E8F5701D663AFF0041A888 /* PeopleStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */; };
+		52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5711D663B420041A888 /* FakePeopleStore.swift */; };
+		52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5731D663EEC0041A888 /* PeopleStore.swift */; };
+		52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */; };
+		52E8F5781D6674030041A888 /* FakeViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */; };
+		52E97B7E1D74E5B4008A626A /* AnyRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +67,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		522184061D6E1C3900A9D80A /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerTests.swift; sourceTree = "<group>"; };
+		5221840A1D6E1D4D00A9D80A /* People.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
+		5221840C1D6E3D5100A9D80A /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeServiceType.swift; sourceTree = "<group>"; };
+		522184101D6E40E700A9D80A /* FakeChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeChallengeService.swift; sourceTree = "<group>"; };
+		522184121D6E456900A9D80A /* RandomizerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerType.swift; sourceTree = "<group>"; };
+		522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRandomizer.swift; sourceTree = "<group>"; };
+		522184171D6E4E2C00A9D80A /* RandomizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerTests.swift; sourceTree = "<group>"; };
+		5221841A1D6E4EEB00A9D80A /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
+		525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceType.swift; sourceTree = "<group>"; };
+		525BE1471D6BB087003B9839 /* FakePeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePeopleService.swift; sourceTree = "<group>"; };
+		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
+		52A9853E1D6BA43D00EB0247 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B7007A1D6F509B00136672 /* ChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
+		52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeServiceTests.swift; sourceTree = "<group>"; };
+		52CFABBE1D6CB40F00349460 /* NetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
+		52CFABC01D6CB4F700349460 /* FakeNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNetwork.swift; sourceTree = "<group>"; };
+		52CFABC31D6CBF5500349460 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
+		52CFABC71D6CCA3600349460 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLProvider.swift; sourceTree = "<group>"; };
+		52D4A6771D70F78C00B78EB5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenterType.swift; sourceTree = "<group>"; };
+		52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePersonPresenter.swift; sourceTree = "<group>"; };
+		52DA7A721D6F6A8700816314 /* PersonPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPresenter.swift; sourceTree = "<group>"; };
+		52DA7A741D6F8FFF00816314 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		52DA7A761D6F902600816314 /* GameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerTests.swift; sourceTree = "<group>"; };
+		52DA7A781D6F906400816314 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		52E8F5351D6619990041A888 /* WhackAPivotRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPivotRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E8F5381D6619990041A888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52E8F53A1D6619990041A888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52E8F53D1D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52E8F53A1D6619990041A888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52E8F53F1D6619990041A888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E8F5421D6619990041A888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E8F5441D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E8F5491D6619990041A888 /* WhackAPivotReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAPivotReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackAPivotReduxTests.swift; sourceTree = "<group>"; };
 		52E8F54F1D6619990041A888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E8F5581D661E030041A888 /* WhackAPivotReduxTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhackAPivotReduxTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		52E8F55F1D6625D70041A888 /* URLProviderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProviderType.swift; sourceTree = "<group>"; };
+		52E8F5621D66285A0041A888 /* URLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
+		52E8F5641D662EED0041A888 /* TokenStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStoreType.swift; sourceTree = "<group>"; };
+		52E8F5671D662FB90041A888 /* TokenStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTokenStore.swift; sourceTree = "<group>"; };
+		52E8F56D1D6638A20041A888 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStoreType.swift; sourceTree = "<group>"; };
+		52E8F5711D663B420041A888 /* FakePeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePeopleStore.swift; sourceTree = "<group>"; };
+		52E8F5731D663EEC0041A888 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
+		52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitioner.swift; sourceTree = "<group>"; };
+		52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeViewControllerTransitioner.swift; sourceTree = "<group>"; };
+		52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyRandomizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +139,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522184051D6E1BF600A9D80A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				52DA7A781D6F906400816314 /* Game.storyboard */,
+				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52D4A6771D70F78C00B78EB5 /* Login.storyboard */,
+				5221840A1D6E1D4D00A9D80A /* People.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		522184161D6E4E1200A9D80A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				522184171D6E4E2C00A9D80A /* RandomizerTests.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		522184191D6E4EDE00A9D80A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5221841A1D6E4EEB00A9D80A /* Randomizer.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		525BE1491D6BB6A4003B9839 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				52B7007C1D6F511D00136672 /* ChallengeServiceTests.swift */,
+				52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		52A985371D6B9D0400EB0247 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52A985381D6B9D1500EB0247 /* UIStoryboard.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		52A9853C1D6BA3FD00EB0247 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */,
+				52A9853E1D6BA43D00EB0247 /* ViewController.swift */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		52CFABC21D6CBF3E00349460 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				52B7007A1D6F509B00136672 /* ChallengeService.swift */,
+				52CFABC31D6CBF5500349460 /* Network.swift */,
+				52CFABC71D6CCA3600349460 /* PeopleService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		52DA7A711D6F6A6E00816314 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				52DA7A721D6F6A8700816314 /* PersonPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
 		52E8F52C1D6619990041A888 = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +232,19 @@
 			isa = PBXGroup;
 			children = (
 				52E8F5381D6619990041A888 /* AppDelegate.swift */,
-				52E8F53A1D6619990041A888 /* ViewController.swift */,
-				52E8F53C1D6619990041A888 /* Main.storyboard */,
 				52E8F53F1D6619990041A888 /* Assets.xcassets */,
-				52E8F5411D6619990041A888 /* LaunchScreen.storyboard */,
+				52E8F55B1D661E5A0041A888 /* Controllers */,
+				52A985371D6B9D0400EB0247 /* Extensions */,
 				52E8F5441D6619990041A888 /* Info.plist */,
+				52E8F56C1D6638790041A888 /* Models */,
+				52DA7A711D6F6A6E00816314 /* Presenters */,
+				52E8F55E1D6625B80041A888 /* Protocols */,
+				52E8F5611D6628420041A888 /* Providers */,
+				52CFABC21D6CBF3E00349460 /* Services */,
+				52E8F5661D662FA70041A888 /* Stores */,
+				522184051D6E1BF600A9D80A /* Storyboards */,
+				52A9853C1D6BA3FD00EB0247 /* Types */,
+				522184191D6E4EDE00A9D80A /* Utilities */,
 			);
 			path = WhackAPivotRedux;
 			sourceTree = "<group>";
@@ -90,10 +252,93 @@
 		52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */ = {
 			isa = PBXGroup;
 			children = (
-				52E8F54D1D6619990041A888 /* WhackAPivotReduxTests.swift */,
+				52E8F55D1D6625930041A888 /* Controllers */,
+				52E8F5691D6632E80041A888 /* Fakes */,
 				52E8F54F1D6619990041A888 /* Info.plist */,
+				525BE1491D6BB6A4003B9839 /* Services */,
+				522184161D6E4E1200A9D80A /* Utilities */,
+				52E8F5581D661E030041A888 /* WhackAPivotReduxTests-Bridging-Header.h */,
 			);
 			path = WhackAPivotReduxTests;
+			sourceTree = "<group>";
+		};
+		52E8F55B1D661E5A0041A888 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52DA7A741D6F8FFF00816314 /* GameViewController.swift */,
+				52E8F53A1D6619990041A888 /* LoginViewController.swift */,
+				522184061D6E1C3900A9D80A /* PeopleViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52E8F55D1D6625930041A888 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52DA7A761D6F902600816314 /* GameViewControllerTests.swift */,
+				52E8F5591D661E030041A888 /* LoginViewControllerTests.swift */,
+				522184081D6E1C7C00A9D80A /* PeopleViewControllerTests.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52E8F55E1D6625B80041A888 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5221840E1D6E3DDC00A9D80A /* ChallengeServiceType.swift */,
+				52CFABBE1D6CB40F00349460 /* NetworkType.swift */,
+				525BE1451D6BADB2003B9839 /* PeopleServiceType.swift */,
+				52E8F56F1D663AFF0041A888 /* PeopleStoreType.swift */,
+				52DA7A6D1D6F667300816314 /* PersonPresenterType.swift */,
+				522184121D6E456900A9D80A /* RandomizerType.swift */,
+				52E8F5641D662EED0041A888 /* TokenStoreType.swift */,
+				52E8F55F1D6625D70041A888 /* URLProviderType.swift */,
+				52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		52E8F5611D6628420041A888 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5621D66285A0041A888 /* URLProvider.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		52E8F5661D662FA70041A888 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				52E8F5731D663EEC0041A888 /* PeopleStore.swift */,
+				52E8F5671D662FB90041A888 /* TokenStore.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		52E8F5691D6632E80041A888 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				522184101D6E40E700A9D80A /* FakeChallengeService.swift */,
+				52CFABC01D6CB4F700349460 /* FakeNetwork.swift */,
+				525BE1471D6BB087003B9839 /* FakePeopleService.swift */,
+				52E8F5711D663B420041A888 /* FakePeopleStore.swift */,
+				522184141D6E4B5A00A9D80A /* FakeRandomizer.swift */,
+				52E8F56A1D6632FA0041A888 /* FakeTokenStore.swift */,
+				52CFABC91D6CCE6300349460 /* FakeURLProvider.swift */,
+				52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */,
+				52DA7A6F1D6F670400816314 /* FakePersonPresenter.swift */,
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		52E8F56C1D6638790041A888 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5221840C1D6E3D5100A9D80A /* Challenge.swift */,
+				52E8F56D1D6638A20041A888 /* Person.swift */,
+				52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +397,7 @@
 					52E8F5481D6619990041A888 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78NNNKRM7Q;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 52E8F5341D6619990041A888;
 					};
@@ -182,8 +428,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E8F5431D6619990041A888 /* LaunchScreen.storyboard in Resources */,
+				5221840B1D6E1D4D00A9D80A /* People.storyboard in Resources */,
+				52D4A6781D70F78C00B78EB5 /* Login.storyboard in Resources */,
 				52E8F5401D6619990041A888 /* Assets.xcassets in Resources */,
-				52E8F53E1D6619990041A888 /* Main.storyboard in Resources */,
+				52DA7A791D6F906400816314 /* Game.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +449,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E8F53B1D6619990041A888 /* ViewController.swift in Sources */,
+				5221840D1D6E3D5100A9D80A /* Challenge.swift in Sources */,
+				52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */,
+				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
+				5221840F1D6E3DDC00A9D80A /* ChallengeServiceType.swift in Sources */,
+				52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */,
+				522184131D6E456900A9D80A /* RandomizerType.swift in Sources */,
+				52DA7A6E1D6F667300816314 /* PersonPresenterType.swift in Sources */,
+				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
+				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
+				52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */,
+				522184071D6E1C3900A9D80A /* PeopleViewController.swift in Sources */,
 				52E8F5391D6619990041A888 /* AppDelegate.swift in Sources */,
+				52E8F5631D66285A0041A888 /* URLProvider.swift in Sources */,
+				52E8F5601D6625D70041A888 /* URLProviderType.swift in Sources */,
+				52E8F5701D663AFF0041A888 /* PeopleStoreType.swift in Sources */,
+				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
+				52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */,
+				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				52E97B7E1D74E5B4008A626A /* AnyRandomizer.swift in Sources */,
+				52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */,
+				52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */,
+				5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */,
+				525BE1461D6BADB2003B9839 /* PeopleServiceType.swift in Sources */,
+				52E8F5651D662EED0041A888 /* TokenStoreType.swift in Sources */,
+				52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */,
+				52E8F5681D662FB90041A888 /* TokenStore.swift in Sources */,
+				52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +483,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E8F54E1D6619990041A888 /* WhackAPivotReduxTests.swift in Sources */,
+				522184111D6E40E700A9D80A /* FakeChallengeService.swift in Sources */,
+				52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */,
+				522184091D6E1C7C00A9D80A /* PeopleViewControllerTests.swift in Sources */,
+				522184151D6E4B5A00A9D80A /* FakeRandomizer.swift in Sources */,
+				525BE1481D6BB087003B9839 /* FakePeopleService.swift in Sources */,
+				52CFABC11D6CB4F700349460 /* FakeNetwork.swift in Sources */,
+				52CFABCA1D6CCE6300349460 /* FakeURLProvider.swift in Sources */,
+				52B7007D1D6F511D00136672 /* ChallengeServiceTests.swift in Sources */,
+				522184181D6E4E2C00A9D80A /* RandomizerTests.swift in Sources */,
+				52DA7A701D6F670400816314 /* FakePersonPresenter.swift in Sources */,
+				52E8F56B1D6632FA0041A888 /* FakeTokenStore.swift in Sources */,
+				52E8F55A1D661E030041A888 /* LoginViewControllerTests.swift in Sources */,
+				52E8F5721D663B420041A888 /* FakePeopleStore.swift in Sources */,
+				52CFABC61D6CC77700349460 /* PeopleServiceTests.swift in Sources */,
+				52E8F5781D6674030041A888 /* FakeViewControllerTransitioner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +512,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52E8F53C1D6619990041A888 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52E8F53D1D6619990041A888 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52E8F5411D6619990041A888 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,11 +645,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78NNNKRM7Q;
 				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhackAPivotReduxTests/WhackAPivotReduxTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
 			};
@@ -381,11 +663,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78NNNKRM7Q;
 				INFOPLIST_FILE = WhackAPivotReduxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.whackapivot.WhackAPivotReduxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhackAPivotReduxTests/WhackAPivotReduxTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackAPivotRedux.app/WhackAPivotRedux";
 			};
@@ -410,6 +694,7 @@
 				52E8F5541D6619990041A888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52E8F5551D6619990041A888 /* Build configuration list for PBXNativeTarget "WhackAPivotReduxTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +703,7 @@
 				52E8F5571D6619990041A888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

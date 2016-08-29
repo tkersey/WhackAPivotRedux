@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ez4-ij-ybA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ELN-wK-tzc">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewControllerIdentifier" id="Ez4-ij-ybA" customClass="LoginViewController" customModule="WhackAPivotRedux" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHw-wR-Lwg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZHp-eZ-unM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z38-MI-qNt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="x9Q-0U-o7r" kind="show" identifier="PeopleViewController" id="7OS-T5-Xtu"/>
+                        <segue destination="3g2-ak-o8a" kind="show" identifier="segueToGame" id="cBp-uC-AtK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hz7-h1-NqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="141"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="uss-N0-R2w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="People" id="x9Q-0U-o7r" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCQ-ZB-Vy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="50"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="di8-gk-s2f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="3g2-ak-o8a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKL-cc-M3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="224"/>
+        </scene>
+    </scenes>
+</document>
