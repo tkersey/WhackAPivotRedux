@@ -25,6 +25,10 @@ class LoginViewControllerTests: XCTestCase {
         controller.viewControllerTransitioner = viewControllerTransitioner
     }
 
+    func testNotDisplayingStatusBar() {
+        XCTAssert(controller.prefersStatusBarHidden)
+    }
+
     func testViewContainsWebView() {
         XCTAssert(controller.view.subviews.contains(controller.webview))
     }

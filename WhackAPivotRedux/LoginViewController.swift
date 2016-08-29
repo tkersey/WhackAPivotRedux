@@ -35,6 +35,10 @@ extension LoginViewController {
             webview.load(URLRequest(url: url))
         }
     }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 // MARK: - WKWebView delegate
