@@ -26,9 +26,13 @@ class PeopleStore: PeopleStoreType {
         set {
             if let newPeople = newValue {
                 do {
-                    let people: [[String:AnyObject]] = try newPeople.map { person -> [String:AnyObject] in
+                    let people: [[String:AnyObject]] = newPeople.map { person -> [String:AnyObject] in
                         if let data = UIImagePNGRepresentation(person.image) {
-                            try data.write(to: URL(fileURLWithPath: "\(documentsPath)/\(person.id).png"))
+                            do {
+                                try data.write(to: URL(fileURLWithPath: "\(documentsPath)/\(person.id).png"))
+                            } catch {
+                                print("\nFailed to store avatar for person\n")
+                            }
                         }
                         return ["id": person.id as AnyObject, "name": person.name as AnyObject, "location_name": person.locationName as AnyObject]
                     }
