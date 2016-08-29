@@ -75,6 +75,8 @@ class LoginViewControllerTests: XCTestCase {
 
         XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
         XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "PeopleViewController")
+
+        HTTPCookieStorage.shared.deleteCookie(cookie)
     }
 
     func testNotSavingTokenWhenAuthTokenIsNotPresent() {
