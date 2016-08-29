@@ -19,10 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="x9Q-0U-o7r" kind="show" identifier="PeopleViewController" id="7OS-T5-Xtu"/>
+                        <segue destination="3g2-ak-o8a" kind="show" identifier="segueToGame" id="cBp-uC-AtK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hz7-h1-NqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="151" y="141"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="uss-N0-R2w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="People" id="x9Q-0U-o7r" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCQ-ZB-Vy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="50"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="di8-gk-s2f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="3g2-ak-o8a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKL-cc-M3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="224"/>
         </scene>
     </scenes>
 </document>
