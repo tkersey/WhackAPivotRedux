@@ -1,9 +1,9 @@
 import Foundation
 
 struct PeopleService: PeopleServiceType {
-    var network: NetworkType!
-    var tokenStore: TokenStoreType!
-    var urlProvider: URLProviderType!
+    var network: NetworkType = Network()
+    var tokenStore: TokenStoreType = TokenStore()
+    var urlProvider: URLProviderType = URLProvider(baseURL: "https://pivots.pivotallabs.com")
 
     func getPeople(success: @escaping ([Person]) -> Void, failure: @escaping (Error) -> Void, filter: @escaping (Person) -> Bool = { _ in true }) {
         guard let token = tokenStore.token else {

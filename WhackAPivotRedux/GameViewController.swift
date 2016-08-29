@@ -5,9 +5,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
 
-    var peopleStore: PeopleStoreType!
-    var challengeService: ChallengeServiceType!
-    var personPresenter: PersonPresenterType!
+    var peopleStore: PeopleStoreType = PeopleStore()
+    var challengeService: ChallengeServiceType = ChallengeService(randomizer: Randomizer())
+    var personPresenter: PersonPresenterType = PersonPresenter()
 
     fileprivate var challenge: Challenge?
 }

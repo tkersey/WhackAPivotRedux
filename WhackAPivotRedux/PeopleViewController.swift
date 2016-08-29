@@ -2,8 +2,8 @@ import UIKit
 
 class PeopleViewController: UIViewController {
     var viewControllerTransitioner: ViewControllerTransitioner!
-    var peopleService: PeopleServiceType!
-    var peopleStore: PeopleStoreType!
+    var peopleService: PeopleServiceType = PeopleService()
+    var peopleStore: PeopleStoreType = PeopleStore()
 }
 
 // MARK: - Display
