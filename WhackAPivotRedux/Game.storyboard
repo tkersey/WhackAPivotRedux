@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,80 +19,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgB-AS-k8S">
-                                <frame key="frameInset" minX="117" minY="148" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="6sz-8R-Ekn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJg-OX-qZ0">
-                                <frame key="frameInset" minX="117" minY="192" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="JbG-fp-JYy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oK-ml-dZj">
-                                <frame key="frameInset" minX="127" minY="202" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="f3m-RF-3Dx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUi-45-Nhh">
-                                <frame key="frameInset" minX="137" minY="212" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="7Xh-bp-odW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-cY-OMR">
-                                <frame key="frameInset" minX="147" minY="222" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="HlK-YO-ZwR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-CM-6Tl">
-                                <frame key="frameInset" minX="157" minY="232" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="GV0-p7-Yhx"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-c5-qDk">
-                                <frame key="frameInset" minX="47" minY="45" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EvH-J9-X0c">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-Ig-AjP">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgB-AS-k8S">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZgB-AS-k8S" secondAttribute="height" multiplier="1:1" id="YaQ-m1-QNC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="6sz-8R-Ekn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJg-OX-qZ0">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OJg-OX-qZ0" secondAttribute="height" multiplier="1:1" id="OEr-vo-1kN"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="JbG-fp-JYy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oK-ml-dZj">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6oK-ml-dZj" secondAttribute="height" multiplier="1:1" id="LT2-CA-2ge"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="f3m-RF-3Dx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jSH-gu-Cs3">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUi-45-Nhh">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YUi-45-Nhh" secondAttribute="height" multiplier="1:1" id="9mN-0N-ZEe"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="7Xh-bp-odW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-cY-OMR">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zBI-cY-OMR" secondAttribute="height" multiplier="1:1" id="l0k-HW-ESz"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="HlK-YO-ZwR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-CM-6Tl">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7c5-CM-6Tl" secondAttribute="height" multiplier="1:1" id="zRj-7p-91U"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonWasPressed:" destination="vm0-VR-uF9" eventType="touchUpInside" id="GV0-p7-Yhx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wgb-Ig-AjP" secondAttribute="trailing" constant="10" id="P87-gf-T8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="jSH-gu-Cs3" secondAttribute="trailing" constant="10" id="dW0-X6-Vzw"/>
+                                    <constraint firstItem="wgb-Ig-AjP" firstAttribute="top" secondItem="EvH-J9-X0c" secondAttribute="top" id="glj-PY-27Y"/>
+                                    <constraint firstItem="jSH-gu-Cs3" firstAttribute="leading" secondItem="EvH-J9-X0c" secondAttribute="leading" constant="10" id="iAe-mU-9VT"/>
+                                    <constraint firstItem="wgb-Ig-AjP" firstAttribute="leading" secondItem="EvH-J9-X0c" secondAttribute="leading" constant="10" id="jhy-LH-9l1"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-c5-qDk">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-BK-I2F">
-                                <frame key="frameInset" minX="161" minY="39" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-BK-I2F">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mJG-BK-I2F" firstAttribute="top" secondItem="WLb-c5-qDk" secondAttribute="bottom" constant="20" id="Xlo-Is-mMT"/>
+                            <constraint firstItem="EvH-J9-X0c" firstAttribute="top" secondItem="uD2-DW-yqd" secondAttribute="bottom" id="cO3-2K-AhM"/>
+                            <constraint firstItem="EvH-J9-X0c" firstAttribute="leading" secondItem="2gn-ks-azN" secondAttribute="leading" id="lgz-q7-UWw"/>
+                            <constraint firstItem="WLb-c5-qDk" firstAttribute="centerX" secondItem="2gn-ks-azN" secondAttribute="centerX" id="tOT-rv-oNs"/>
+                            <constraint firstAttribute="trailing" secondItem="EvH-J9-X0c" secondAttribute="trailing" id="uRp-ea-xPW"/>
+                            <constraint firstItem="Q3F-20-kus" firstAttribute="top" secondItem="mJG-BK-I2F" secondAttribute="bottom" constant="37" id="x4N-Kj-aXa"/>
+                            <constraint firstItem="mJG-BK-I2F" firstAttribute="centerX" secondItem="2gn-ks-azN" secondAttribute="centerX" id="yyk-6d-7W1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="mJG-BK-I2F" id="bM7-yP-VyO"/>
                         <outlet property="resultLabel" destination="WLb-c5-qDk" id="gwN-gZ-4GU"/>
-                        <outletCollection property="buttons" destination="ZgB-AS-k8S" id="NPl-LW-Z5f"/>
-                        <outletCollection property="buttons" destination="OJg-OX-qZ0" id="EaK-vq-5mr"/>
-                        <outletCollection property="buttons" destination="6oK-ml-dZj" id="iqJ-3g-QCd"/>
-                        <outletCollection property="buttons" destination="YUi-45-Nhh" id="BYF-vN-s3z"/>
-                        <outletCollection property="buttons" destination="zBI-cY-OMR" id="9YC-dg-3xq"/>
-                        <outletCollection property="buttons" destination="7c5-CM-6Tl" id="f5T-ID-npS"/>
+                        <outletCollection property="buttons" destination="ZgB-AS-k8S" collectionClass="NSMutableArray" id="NPl-LW-Z5f"/>
+                        <outletCollection property="buttons" destination="OJg-OX-qZ0" collectionClass="NSMutableArray" id="EaK-vq-5mr"/>
+                        <outletCollection property="buttons" destination="6oK-ml-dZj" collectionClass="NSMutableArray" id="iqJ-3g-QCd"/>
+                        <outletCollection property="buttons" destination="YUi-45-Nhh" collectionClass="NSMutableArray" id="BYF-vN-s3z"/>
+                        <outletCollection property="buttons" destination="zBI-cY-OMR" collectionClass="NSMutableArray" id="9YC-dg-3xq"/>
+                        <outletCollection property="buttons" destination="7c5-CM-6Tl" collectionClass="NSMutableArray" id="f5T-ID-npS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ew-OS-XfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
