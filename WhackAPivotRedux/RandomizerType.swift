@@ -1,3 +1,4 @@
 protocol RandomizerType {
-    func randomSubset(ofSize: Int, from: [Person], avoiding toAvoid: Set<Person>) -> Challenge
+    associatedtype DataType: Hashable
+    func randomSubset(ofSize: Int, from: [DataType], avoiding toAvoid: Set<DataType>) -> Challenge
 }

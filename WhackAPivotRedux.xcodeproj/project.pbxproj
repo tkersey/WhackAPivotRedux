@@ -53,6 +53,7 @@
 		52E8F5741D663EEC0041A888 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5731D663EEC0041A888 /* PeopleStore.swift */; };
 		52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */; };
 		52E8F5781D6674030041A888 /* FakeViewControllerTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */; };
+		52E97B7E1D74E5B4008A626A /* AnyRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		52E8F5731D663EEC0041A888 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 		52E8F5751D6671230041A888 /* ViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitioner.swift; sourceTree = "<group>"; };
 		52E8F5771D6674030041A888 /* FakeViewControllerTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeViewControllerTransitioner.swift; sourceTree = "<group>"; };
+		52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyRandomizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		52A9853C1D6BA3FD00EB0247 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */,
 				52A9853E1D6BA43D00EB0247 /* ViewController.swift */,
 			);
 			name = Types;
@@ -464,6 +467,7 @@
 				52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */,
 				52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */,
 				52E8F56E1D6638A20041A888 /* Person.swift in Sources */,
+				52E97B7E1D74E5B4008A626A /* AnyRandomizer.swift in Sources */,
 				52DA7A731D6F6A8700816314 /* PersonPresenter.swift in Sources */,
 				52B7007B1D6F509B00136672 /* ChallengeService.swift in Sources */,
 				5221841B1D6E4EEB00A9D80A /* Randomizer.swift in Sources */,

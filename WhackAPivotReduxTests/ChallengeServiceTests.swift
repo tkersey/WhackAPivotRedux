@@ -25,7 +25,7 @@ class ChallengeServiceTests: XCTestCase {
         stubbedChallenge = Challenge(choices: [people[1]], target: 0)
 
         randomizer = FakeRandomizer()
-        service = ChallengeService(randomizer: randomizer)
+        service = ChallengeService(randomizer: AnyRandomizer(randomizer))
         service.newGame(people: people, perChallenge: 6)
 
         randomizer.randomSubsetReturns(stubbedValues: stubbedChallenge)

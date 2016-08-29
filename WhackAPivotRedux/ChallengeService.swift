@@ -1,11 +1,11 @@
 struct ChallengeService: ChallengeServiceType {
-    let randomizer: RandomizerType!
+    let randomizer: AnyRandomizer<Person>
 
     private var previouslyTargeted: Set<Person>!
     private var perChallenge: Int!
     private var people: [Person]!
 
-    init(randomizer: RandomizerType) {
+    init(randomizer: AnyRandomizer<Person>) {
         self.randomizer = randomizer
         self.previouslyTargeted = Set<Person>()
         self.people = []

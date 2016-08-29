@@ -6,7 +6,7 @@ class GameViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
 
     var peopleStore: PeopleStoreType = PeopleStore()
-    var challengeService: ChallengeServiceType = ChallengeService(randomizer: Randomizer())
+    var challengeService: ChallengeServiceType = ChallengeService(randomizer: AnyRandomizer(Randomizer()))
     var personPresenter: PersonPresenterType = PersonPresenter()
 
     fileprivate var challenge: Challenge?
