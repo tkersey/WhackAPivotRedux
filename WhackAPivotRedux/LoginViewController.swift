@@ -1,8 +1,7 @@
 import UIKit
-import WebKit
 
 class LoginViewController: UIViewController {
-    var webview: WKWebView! = WKWebView()
+    var webView: UIWebView = UIWebView()
 
     var viewControllerTransitioner: ViewControllerTransitioner!
     var peopleStore: PeopleStoreType = PeopleStore()
@@ -17,9 +16,9 @@ extension LoginViewController {
 
         viewControllerTransitioner = self
 
-        webview.navigationDelegate = self
-        webview.frame = view.frame
-        view.addSubview(webview)
+        webView.delegate = self
+        webView.frame = view.frame
+        view.addSubview(webView)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -32,7 +31,7 @@ extension LoginViewController {
         if let token = tokenStore.token, !token.isEmpty {
             viewControllerTransitioner.performSegue(withIdentifier: "PeopleViewController", sender: self)
         } else if let url = urlProvider.url(forPath: "/mobile_login") {
-            webview.load(URLRequest(url: url))
+            webView.loadRequest(URLRequest(url: url))
         }
     }
 
@@ -41,10 +40,10 @@ extension LoginViewController {
     }
 }
 
-// MARK: - WKWebView delegate
-extension LoginViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if webView.url == urlProvider.url(forPath: "/mobile_success"), let cookies = HTTPCookieStorage.shared.cookies {
+// MARK: - UIWebView delegate
+extension LoginViewController: UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if let cookies = HTTPCookieStorage.shared.cookies {
             for case let cookie in cookies where cookie.name == "_pivots-two_session" {
                 tokenStore.token = cookie.value
                 viewControllerTransitioner.performSegue(withIdentifier: "PeopleViewController", sender: self)

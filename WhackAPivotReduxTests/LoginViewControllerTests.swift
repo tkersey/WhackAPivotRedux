@@ -30,16 +30,16 @@ class LoginViewControllerTests: XCTestCase {
     }
 
     func testViewContainsWebView() {
-        XCTAssert(controller.view.subviews.contains(controller.webview))
+        XCTAssert(controller.view.subviews.contains(controller.webView))
     }
 
     func testWebViewFrame() {
-        XCTAssertEqual(controller.webview.frame, controller.view.frame)
+        XCTAssertEqual(controller.webView.frame, controller.view.frame)
     }
 
     func testUIWebViewDelegate() {
-        XCTAssert(controller.conforms(to: WKNavigationDelegate.self))
-        controller.webview.navigationDelegate!.isEqual(controller)
+        XCTAssert(controller.conforms(to: UIWebViewDelegate.self))
+        XCTAssert(controller.webView.delegate!.isEqual(controller))
     }
 
     func testWhenPeopleArePresentInPeopleStore() {
@@ -60,21 +60,14 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "PeopleViewController")
     }
 
-    func testLoadingRequestIfTokenNotPresent() {
-        controller.beginAppearanceTransition(true, animated: false)
-        controller.endAppearanceTransition()
-
-        XCTAssertEqual(controller.webview.url?.absoluteString, "http://cashcats.biz/mobile_login")
-    }
-
     func testSavingToTokenStoreWhenAuthTokenIsPresent() {
-        controller.webview.load(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
+        controller.webView.loadRequest(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
         let cookie = HTTPCookie(properties: [.path:"\\",
                             .originURL: controller.urlProvider.url(forPath: "")!,
                             .name:"_pivots-two_session",
                             .value:"foo"])!
         HTTPCookieStorage.shared.setCookie(cookie)
-        controller.webView(controller.webview, didFinish: nil)
+        controller.webViewDidFinishLoad(controller.webView)
         XCTAssertEqual(controller.tokenStore.token, cookie.value)
 
         XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
@@ -84,8 +77,8 @@ class LoginViewControllerTests: XCTestCase {
     }
 
     func testNotSavingTokenWhenAuthTokenIsNotPresent() {
-        controller.webview.load(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
-        controller.webView(controller.webview, didFinish: nil)
+        controller.webView.loadRequest(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
+        controller.webViewDidFinishLoad(controller.webView)
         XCTAssertNil(controller.tokenStore.token)
     }
 }
