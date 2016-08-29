@@ -30,7 +30,7 @@ class PeopleStore: PeopleStoreType {
                         if let data = UIImagePNGRepresentation(person.image) {
                             try data.write(to: URL(fileURLWithPath: "\(documentsPath)/\(person.id).png"))
                         }
-                        return ["id": person.id as AnyObject, "name": person.name as AnyObject]
+                        return ["id": person.id as AnyObject, "name": person.name as AnyObject, "location_name": person.locationName as AnyObject]
                     }
 
                     let data = try JSONSerialization.data(withJSONObject: people, options: .prettyPrinted)
