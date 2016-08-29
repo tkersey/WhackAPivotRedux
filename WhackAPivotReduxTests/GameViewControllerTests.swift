@@ -43,6 +43,11 @@ class GameViewControllerTests: XCTestCase {
 
         _ = controller.view
     }
+
+    func testNotDisplayingStatusBar() {
+        XCTAssert(controller.prefersStatusBarHidden)
+    }
+
     func testDisplayingTheCorrectPeople() {
         XCTAssertEqual(presenter.displayCallCount, 6)
         XCTAssertEqual(presenter.displayArgsForCall(0).0, people[0])

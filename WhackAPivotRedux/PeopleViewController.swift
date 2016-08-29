@@ -24,4 +24,8 @@ extension PeopleViewController {
                 self.viewControllerTransitioner.dismiss(animated: true, completion: nil)
             }, filter: { $0.locationName == "Los Angeles" })
     }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }

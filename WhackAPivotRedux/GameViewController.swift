@@ -24,6 +24,10 @@ extension GameViewController {
             setupChallenge()
         }
     }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 // MARK: - Actions

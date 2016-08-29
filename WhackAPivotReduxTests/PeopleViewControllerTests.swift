@@ -30,6 +30,10 @@ class PeopleViewControllerTests: XCTestCase {
         controller.endAppearanceTransition()
     }
 
+    func testNotDisplayingStatusBar() {
+        XCTAssert(controller.prefersStatusBarHidden)
+    }
+
     func testSuccess() {
         peopleService.getPeopleArgsForCall(0).0(expectedPeople)
 
