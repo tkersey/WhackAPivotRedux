@@ -1,5 +1,5 @@
-struct Challenge: Equatable {
-    let choices: [Person]
+struct Challenge<DataType: Hashable>: Equatable {
+    let choices: [DataType]
     let target: Int
 
     static func ==(lhs: Challenge, rhs: Challenge) -> Bool {

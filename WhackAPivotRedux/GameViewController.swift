@@ -6,10 +6,10 @@ class GameViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
 
     var peopleStore: PeopleStoreType = PeopleStore()
-    var challengeService: ChallengeServiceType = ChallengeService(randomizer: AnyRandomizer(Randomizer()))
+    var challengeService: ChallengeServiceType = ChallengeService(randomizer: AnyRandomizer(Randomizer<Person>()))
     var personPresenter: PersonPresenterType = PersonPresenter()
 
-    fileprivate var challenge: Challenge?
+    fileprivate var challenge: Challenge<Person>?
 }
 
 // MARK: - Display
