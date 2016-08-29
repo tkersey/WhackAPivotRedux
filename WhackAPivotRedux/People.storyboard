@@ -17,12 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="7Ds-Yl-wO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading pivots..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-zh-crK">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JT2-zh-crK" firstAttribute="centerX" secondItem="7Ds-Yl-wO8" secondAttribute="centerX" id="V5y-Kl-bdX"/>
+                            <constraint firstItem="JT2-zh-crK" firstAttribute="centerY" secondItem="7Ds-Yl-wO8" secondAttribute="centerY" id="VMS-h2-BbP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Aos-KG-GjQ" kind="show" identifier="segueToGame" id="ySc-o7-dlj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0o-Z2-MGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="-56"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="xzR-sC-6Pj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="Aos-KG-GjQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYi-6K-65M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="-57"/>
         </scene>
     </scenes>
 </document>
