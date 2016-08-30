@@ -17,7 +17,7 @@ struct ChallengeService: ChallengeServiceType {
         self.perChallenge = perChallenge
     }
 
-    mutating func getChallenge() -> Challenge? {
+    mutating func getChallenge() -> Challenge<Person>? {
         if previouslyTargeted.count == people.count { return nil }
         let challenge = randomizer.randomSubset(ofSize: perChallenge, from: people, avoiding: previouslyTargeted)
         previouslyTargeted.insert(challenge.choices[challenge.target])

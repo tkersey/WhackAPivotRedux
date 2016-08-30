@@ -4,8 +4,8 @@ import XCTest
 class ChallengeServiceTests: XCTestCase {
     var service: ChallengeService!
     var randomizer: FakeRandomizer!
-    var challenge: Challenge!
-    var stubbedChallenge: Challenge!
+    var challenge: Challenge<Person>!
+    var stubbedChallenge: Challenge<Person>!
 
     let people = [
         Person(name: "Joe", id: 0, locationName: ""),
