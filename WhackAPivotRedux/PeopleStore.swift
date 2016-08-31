@@ -24,7 +24,7 @@ class PeopleStore: PeopleStoreType {
         }
 
         set {
-            if let newPeople = newValue {
+            if let newPeople = newValue, let documentsPath = documentsPath {
                 do {
                     let people: [[String:AnyObject]] = newPeople.map { person -> [String:AnyObject] in
                         if let data = UIImagePNGRepresentation(person.image) {
