@@ -31,7 +31,7 @@ class PeopleStore: PeopleStoreType {
                             do {
                                 try data.write(to: URL(fileURLWithPath: "\(documentsPath)/\(person.id).png"))
                             } catch {
-                                print("\nFailed to store avatar for person\n")
+                                print("\nFailed to store avatar for person: \(error.localizedDescription)\n")
                             }
                         }
                         return ["id": person.id as AnyObject, "name": person.name as AnyObject, "location_name": person.locationName as AnyObject]
@@ -40,7 +40,7 @@ class PeopleStore: PeopleStoreType {
                     let data = try JSONSerialization.data(withJSONObject: people, options: .prettyPrinted)
                     try data.write(to: URL(fileURLWithPath: "\(documentsPath)/people.json"), options: .noFileProtection)
                 } catch {
-                    print("\nFailed to store people\n")
+                    print("\nFailed to store people: \(error.localizedDescription)\n")
                 }
             }
         }
