@@ -43,7 +43,7 @@ extension LoginViewController {
 // MARK: - UIWebView delegate
 extension LoginViewController: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        if let cookies = HTTPCookieStorage.shared.cookies {
+        if webView.request?.url == urlProvider.url(forPath: "/mobile_success"), let cookies = HTTPCookieStorage.shared.cookies {
             for case let cookie in cookies where cookie.name == "_pivots-two_session" {
                 tokenStore.token = cookie.value
                 viewControllerTransitioner.performSegue(withIdentifier: "PeopleViewController", sender: self)
