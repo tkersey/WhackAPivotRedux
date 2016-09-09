@@ -4,9 +4,7 @@ import UIKit
 
 class GameViewControllerTests: XCTestCase {
     var controller: GameViewController!
-    var challengeService: FakeChallengeService!
-    var presenter: FakePersonPresenter!
-    var store: FakePeopleStore!
+    var peopleService: FakePeopleService!
 
     let people = [
         Person(name: "Joe", id: 0, locationName: ""),
@@ -17,30 +15,15 @@ class GameViewControllerTests: XCTestCase {
         Person(name: "Steve5", id: 5, locationName: "")
     ]
 
-    let morePeople = [
-        Person(name: "Joe7", id: 7, locationName: ""),
-        Person(name: "Steve7", id: 70, locationName: ""),
-        Person(name: "Steve27", id: 27, locationName: ""),
-        Person(name: "Steve37", id: 37, locationName: ""),
-        Person(name: "Steve47", id: 47, locationName: ""),
-        Person(name: "Steve57", id: 57, locationName: "")
-    ]
-
     override func setUp() {
         super.setUp()
 
-        store = FakePeopleStore()
-        store.people = people
+        store = Store<AppState>(reducer: AppReducer(), state: nil)
 
-        challengeService = FakeChallengeService()
-        challengeService.getChallengeReturns(stubbedValues: Challenge(choices: people, target: 1))
-        presenter = FakePersonPresenter()
+        peopleService = FakePeopleService()
 
         controller = UIStoryboard.loadViewController(viewControllerIdentifier: .game)
-        controller.peopleStore = store
-        controller.challengeService = challengeService
-        controller.personPresenter = presenter
-
+        controller.peopleService = peopleService
         _ = controller.view
     }
 
@@ -48,54 +31,143 @@ class GameViewControllerTests: XCTestCase {
         XCTAssert(controller.prefersStatusBarHidden)
     }
 
-    func testDisplayingTheCorrectPeople() {
-        XCTAssertEqual(presenter.displayCallCount, 6)
-        XCTAssertEqual(presenter.displayArgsForCall(0).0, people[0])
-        XCTAssertEqual(presenter.displayArgsForCall(1).0, people[1])
-        XCTAssertEqual(presenter.displayArgsForCall(2).0, people[2])
-        XCTAssertEqual(presenter.displayArgsForCall(3).0, people[3])
-        XCTAssertEqual(presenter.displayArgsForCall(4).0, people[4])
-        XCTAssertEqual(presenter.displayArgsForCall(5).0, people[5])
+    func testSubscribedToStore() {
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
+        XCTAssert(store.subscriptions.first?.subscriber is GameViewController)
     }
 
-    func testSettingNameLabelOfTargetPerson() {
-        XCTAssertEqual(controller.nameLabel.text, "Steve")
+    func testUnsubscribingFromStore() {
+        controller.viewWillDisappear(false)
+        XCTAssert(store.subscriptions.isEmpty)
     }
 
-    func testHiddenResultLabel() {
+    func testResultLabelSetup() {
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
+
+        XCTAssert(controller.resultLabel.isHidden)
+        XCTAssertEqual("Incorrect!", controller.resultLabel.text)
+    }
+
+    func testNotLoggedIn() {
+        let transitioner = FakeViewControllerTransitioner()
+        controller.viewControllerTransitioner = transitioner
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        controller.newState(state: state)
+
+        controller.viewDidAppear(false)
+
+        XCTAssertEqual(1, transitioner.performSegueCallCount)
+        XCTAssertEqual("LoginSegue", transitioner.performSegueArgsForCall(0).0)
+    }
+
+    func testLoggedIn() {
+        let transitioner = FakeViewControllerTransitioner()
+        controller.viewControllerTransitioner = transitioner
+
+        var state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        state.authenticationState.sessionToken = "Another Fake Token"
+        controller.newState(state: state)
+
+        controller.viewDidAppear(false)
+
+        XCTAssertEqual(0, transitioner.performSegueCallCount)
+    }
+
+    func testFetchingPeopleIfChallengeHasNone() {
+        let reducer = FakeAppReducer()
+        var authenticationState = FakeAuthenticationState()
+        authenticationState.sessionToken = "GotzATok"
+        let state = AppState(authenticationState: authenticationState, challengeState: FakeChallengeState())
+
+        reducer.handleActionReturns(stubbedValues: state)
+        peopleService.getPeopleSuccessStub = people
+
+        store = Store<AppState>(reducer: reducer, state: state)
+        controller.newState(state: state)
+
+        XCTAssert(reducer.handlActionArgsForCall(0).0 is SetPeople)
+        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! SetPeople).people, people)
+    }
+
+    func testReadyForAChallenge() {
+        let reducer = FakeAppReducer()
+        var authenticationState = FakeAuthenticationState()
+        authenticationState.sessionToken = "GotzATok"
+        var challengeState = FakeChallengeState()
+        challengeState.people = people
+        let state = AppState(authenticationState: authenticationState, challengeState: challengeState)
+
+        reducer.handleActionReturns(stubbedValues: state)
+
+        store = Store<AppState>(reducer: reducer, state: state)
+        controller.newState(state: state)
+
+        XCTAssert(reducer.handlActionArgsForCall(0).0 is CreateChallenge)
+        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! CreateChallenge).per, 6)
+    }
+
+    func testChallenge() {
+        var challengeState = FakeChallengeState()
+        challengeState.previouslyTargeted = Set<Person>()
+        challengeState.people = people
+        challengeState = challengeReducer(state: challengeState, action: CreateChallenge(per: 2)) as! FakeChallengeState
+        let challenge = challengeState.challenge!
+
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        controller.newState(state: state)
+
+        for (index, person) in challenge.choices.enumerated() {
+            XCTAssertEqual(controller.buttons[index].backgroundImage(for: .normal), person.image)
+        }
+
+        XCTAssertEqual(challenge.choices[challenge.target].name, controller.nameLabel.text)
+    }
+
+    func testCorrectChallengeSelection() {
+        var challengeState = FakeChallengeState()
+        challengeState.previouslyTargeted = Set<Person>()
+        challengeState.people = people
+        challengeState = challengeReducer(state: challengeState, action: CreateChallenge(per: 2)) as! FakeChallengeState
+        challengeState.correctSelection = true
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        controller.newState(state: state)
+
+        controller.buttons[challengeState.challenge!.target].sendActions(for: .touchUpInside)
+
         XCTAssert(controller.resultLabel.isHidden)
     }
 
-    func testClickingOnTheWrongPersontToRefreshPeople() {
-        challengeService.getChallengeReturns(stubbedValues: Challenge(choices: morePeople, target: 1))
-        controller.buttons[1].sendActions(for: .touchUpInside)
+    func testInCorrectChallengeSelection() {
+        var challengeState = FakeChallengeState()
+        challengeState.previouslyTargeted = Set<Person>()
+        challengeState.people = people
+        challengeState = challengeReducer(state: challengeState, action: CreateChallenge(per: 2)) as! FakeChallengeState
+        challengeState.correctSelection = false
 
-        XCTAssertEqual(presenter.displayCallCount, 12)
-        XCTAssertEqual(presenter.displayArgsForCall(6).0, morePeople[0])
-        XCTAssertEqual(presenter.displayArgsForCall(7).0, morePeople[1])
-        XCTAssertEqual(presenter.displayArgsForCall(8).0, morePeople[2])
-        XCTAssertEqual(presenter.displayArgsForCall(9).0, morePeople[3])
-        XCTAssertEqual(presenter.displayArgsForCall(10).0, morePeople[4])
-        XCTAssertEqual(presenter.displayArgsForCall(11).0, morePeople[5])
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        controller.newState(state: state)
 
-        XCTAssertEqual(controller.nameLabel.text, "Steve7")
+        controller.buttons[challengeState.challenge!.target].sendActions(for: .touchUpInside)
+
+        XCTAssertFalse(controller.resultLabel.isHidden)
     }
 
-    func testClickingIncorrectImageDisplaysIncorrectAndThenClickCorrectImage() {
+    func testUpdateChallenge() {
+        let reducer = FakeAppReducer()
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        reducer.handleActionReturns(stubbedValues: state)
+
+        store = Store<AppState>(reducer: reducer, state: state)
         controller.buttons[0].sendActions(for: .touchUpInside)
 
-        XCTAssertEqual(controller.resultLabel.text, "Incorrect!")
-        XCTAssertFalse(controller.resultLabel.isHidden)
-
-        controller.buttons[1].sendActions(for: .touchUpInside)
-        XCTAssert(controller.resultLabel.isHidden)
-    }
-
-    func testCorrectlyClickingLastImageOfSet() {
-        presenter.reset()
-        challengeService.getChallengeReturns(stubbedValues: nil)
-        controller.buttons[1].sendActions(for: .touchUpInside)
-
-        XCTAssertEqual(presenter.displayCallCount, 0)
+        XCTAssert(reducer.handlActionArgsForCall(0).0 is UpdateChallenge)
+        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! UpdateChallenge).selected, 0)
     }
 }

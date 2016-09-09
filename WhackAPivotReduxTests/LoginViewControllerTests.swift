@@ -1,85 +1,86 @@
 import XCTest
-import WebKit
 @testable import WhackAPivotRedux
 
 class LoginViewControllerTests: XCTestCase {
     var controller: LoginViewController!
-    var viewControllerTransitioner: FakeViewControllerTransitioner!
-    var peopleStore: PeopleStoreType!
-    var tokenStore: TokenStoreType!
+    var transitioner: FakeViewControllerTransitioner!
 
     override func setUp() {
         super.setUp()
 
-        viewControllerTransitioner = FakeViewControllerTransitioner()
-        peopleStore = FakePeopleStore()
-        tokenStore = FakeTokenStore()
-
+        store = Store<AppState>(reducer: AppReducer(), state: nil)
         controller = UIStoryboard.loadViewController(viewControllerIdentifier: .login)
 
-        controller.peopleStore = peopleStore
-        controller.tokenStore = tokenStore
-        controller.urlProvider = URLProvider(baseURL: "http://cashcats.biz")
-
-        _ = controller.view
-        controller.viewControllerTransitioner = viewControllerTransitioner
+        transitioner = FakeViewControllerTransitioner()
+        controller.viewControllerTransitioner = transitioner
     }
 
     func testNotDisplayingStatusBar() {
         XCTAssert(controller.prefersStatusBarHidden)
     }
 
-    func testViewContainsWebView() {
-        XCTAssert(controller.view.subviews.contains(controller.webView))
-    }
-
-    func testWebViewFrame() {
-        XCTAssertEqual(controller.webView.frame, controller.view.frame)
-    }
-
     func testUIWebViewDelegate() {
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
         XCTAssert(controller.conforms(to: UIWebViewDelegate.self))
         XCTAssert(controller.webView.delegate!.isEqual(controller))
     }
 
-    func testWhenPeopleArePresentInPeopleStore() {
-        peopleStore.people = [Person(name: "", id: 0, locationName: "")]
+    func testSubscribedToStore() {
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
+        XCTAssert(store.subscriptions.first?.subscriber is LoginViewController)
+    }
+
+    func testUnsubscribingFromStore() {
+        controller.viewWillDisappear(false)
+        XCTAssert(store.subscriptions.isEmpty)
+    }
+
+    func testLoginURL() {
+        XCTAssertNil(controller.loginURL)
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        controller.newState(state: state)
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
 
-        XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
-        XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "segueToGame")
+        XCTAssertEqual(state.loginURL, controller.loginURL)
     }
 
-    func testWhenATokenIsPresentInTokenStore() {
-        tokenStore.token = "fake token"
+    func testLoginSuccessURL() {
+        XCTAssertNil(controller.loginSuccessURL)
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        controller.newState(state: state)
+
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
 
-        XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
-        XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "PeopleViewController")
+        XCTAssertEqual(state.loginSuccessURL, controller.loginSuccessURL)
     }
 
-    // TODO - Figure out how to wait for url to load
-    func testSavingToTokenStoreWhenAuthTokenIsPresent() {
-//        controller.webView.loadRequest(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
-//        let cookie = HTTPCookie(properties: [.path:"\\",
-//                            .originURL: controller.urlProvider.url(forPath: "")!,
-//                            .name:"_pivots-two_session",
-//                            .value:"foo"])!
-//        HTTPCookieStorage.shared.setCookie(cookie)
-//        controller.webViewDidFinishLoad(controller.webView)
-//        XCTAssertEqual(controller.tokenStore.token, cookie.value)
-//
-//        XCTAssertEqual(viewControllerTransitioner.performSegueCallCount, 1)
-//        XCTAssertEqual(viewControllerTransitioner.performSegueArgsForCall(0).0, "PeopleViewController")
-//
-//        HTTPCookieStorage.shared.deleteCookie(cookie)
+    func testLoadingCorrectURL() {
+        let webView = FakeWebView()
+        controller.webView = webView
+
+        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        controller.newState(state: state)
+        controller.viewDidAppear(false)
+
+        XCTAssertEqual(webView.loadRequestCallCount, 1)
+        XCTAssertEqual(webView.loadRequestArgsForCall(0).url, state.loginURL)
     }
 
-    func testNotSavingTokenWhenAuthTokenIsNotPresent() {
-        controller.webView.loadRequest(URLRequest(url: controller.urlProvider.url(forPath: "/mobile_success")!))
-        controller.webViewDidFinishLoad(controller.webView)
-        XCTAssertNil(controller.tokenStore.token)
+    func testDismissingIfAlreadyLoggedIn() {
+        var state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        state.authenticationState.sessionToken = "George RR Token"
+
+        controller.beginAppearanceTransition(true, animated: false)
+        controller.endAppearanceTransition()
+
+        controller.newState(state: state)
+
+        XCTAssertEqual(transitioner.dismissCallCount, 1)
     }
 }

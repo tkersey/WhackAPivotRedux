@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "252A680BB52B3C800705C4A6AF699B8A86DC5C44",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "252A680BB52B3C800705C4A6AF699B8A86DC5C44" : 9223372036854775807,
+    "67108B0A168D697C36BDA3AD867F29B9F1E14EF2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BE4A23A6-D62C-4384-A34F-082323DB58B9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "252A680BB52B3C800705C4A6AF699B8A86DC5C44" : "WhackAPivotRedux\/",
+    "67108B0A168D697C36BDA3AD867F29B9F1E14EF2" : "WhackAPivotRedux\/External\/ReSwift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WhackAPivotRedux",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WhackAPivotRedux.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tkersey\/WhackAPivotRedux.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "252A680BB52B3C800705C4A6AF699B8A86DC5C44"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ReSwift\/ReSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67108B0A168D697C36BDA3AD867F29B9F1E14EF2"
+    }
+  ]
+}

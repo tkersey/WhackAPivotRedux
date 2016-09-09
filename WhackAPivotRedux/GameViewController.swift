@@ -5,23 +5,63 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
 
-    var peopleStore: PeopleStoreType = PeopleStore()
-    var challengeService: ChallengeServiceType = ChallengeService(randomizer: AnyRandomizer(Randomizer<Person>()))
-    var personPresenter: PersonPresenterType = PersonPresenter()
+    var viewControllerTransitioner: ViewControllerTransitioner!
+    var peopleService: PeopleServiceType = PeopleService(filter: { $0.locationName == "Los Angeles" })
 
-    fileprivate var challenge: Challenge<Person>?
+    fileprivate var loggedIn: Bool!
+}
+
+// MARK: - State
+extension GameViewController: StoreSubscriber {
+    func newState(state: AppState) {
+        let authenticationState = state.authenticationState
+        let challengeState = state.challengeState
+
+        loggedIn = authenticationState.loggedIn
+
+        if !challengeState.hasPeople {
+            store.dispatch(People(service: peopleService).fetch)
+        }
+
+        if state.readyForChallenge {
+            store.dispatch(CreateChallenge(per: 6))
+        }
+
+        if let challenge = challengeState.challenge {
+            if let correctSelection = challengeState.correctSelection {
+                resultLabel.isHidden = correctSelection
+            }
+
+            for (index, person) in challenge.choices.enumerated() {
+                buttons[index].setBackgroundImage(person.image, for: .normal)
+            }
+
+            nameLabel.text = challenge.choices[challenge.target].name
+        }
+    }
 }
 
 // MARK: - Display
 extension GameViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        store.subscribe(self)
 
+        viewControllerTransitioner = self
         resultLabel.isHidden = true
+        resultLabel.text = "Incorrect!"
+    }
 
-        if let people = peopleStore.people {
-            challengeService.newGame(people: people, perChallenge: 6)
-            setupChallenge()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        store.unsubscribe(self)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if !loggedIn {
+            viewControllerTransitioner.performSegue(withIdentifier: "LoginSegue", sender: self)
         }
     }
 
@@ -33,27 +73,8 @@ extension GameViewController {
 // MARK: - Actions
 extension GameViewController {
     @IBAction func buttonWasPressed(_ sender: UIButton) {
-        if let buttonIndex = buttons.index(of: sender), buttonIndex == challenge?.target {
-            resultLabel.isHidden = true
-            setupChallenge()
-        } else {
-            resultLabel.isHidden = false
-            resultLabel.text = "Incorrect!"
-        }
-    }
-}
-
-// MARK: - Private
-fileprivate extension GameViewController {
-    func setupChallenge() {
-        challenge = challengeService.getChallenge()
-
-        if let challenge = challenge {
-            for (index, person) in challenge.choices.enumerated() {
-                personPresenter.display(person, button: buttons[index])
-            }
-
-            nameLabel.text = challenge.choices[challenge.target].name
+        if let buttonIndex = buttons.index(of: sender) {
+            store.dispatch(UpdateChallenge(selected: buttonIndex))
         }
     }
 }
