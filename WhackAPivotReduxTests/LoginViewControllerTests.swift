@@ -79,6 +79,7 @@ class LoginViewControllerTests: XCTestCase {
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
 
+        controller.viewControllerTransitioner = transitioner
         controller.newState(state: state)
 
         XCTAssertEqual(transitioner.dismissCallCount, 1)
