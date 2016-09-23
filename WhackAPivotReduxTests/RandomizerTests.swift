@@ -12,6 +12,6 @@ class RandomizerTests: XCTestCase {
     }
 
     func testRandomSubset() {
-        XCTAssertEqual(challenge.choices[challenge.target], 1)
+        XCTAssertEqual(1, challenge.choices[challenge.target])
     }
 }

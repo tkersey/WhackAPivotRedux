@@ -89,7 +89,7 @@ class GameViewControllerTests: XCTestCase {
         controller.newState(state: state)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is SetPeople)
-        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! SetPeople).people, people)
+        XCTAssertEqual(people, (reducer.handlActionArgsForCall(0).0 as! SetPeople).people)
     }
 
     func testReadyForAChallenge() {
@@ -106,7 +106,7 @@ class GameViewControllerTests: XCTestCase {
         controller.newState(state: state)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is CreateChallenge)
-        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! CreateChallenge).per, 6)
+        XCTAssertEqual(6, (reducer.handlActionArgsForCall(0).0 as! CreateChallenge).per)
     }
 
     func testChallenge() {
@@ -123,7 +123,7 @@ class GameViewControllerTests: XCTestCase {
         controller.newState(state: state)
 
         for (index, person) in challenge.choices.enumerated() {
-            XCTAssertEqual(controller.buttons[index].backgroundImage(for: .normal), person.image)
+            XCTAssertEqual(person.image, controller.buttons[index].backgroundImage(for: .normal))
         }
 
         XCTAssertEqual(challenge.choices[challenge.target].name, controller.nameLabel.text)
@@ -168,6 +168,6 @@ class GameViewControllerTests: XCTestCase {
         controller.buttons[0].sendActions(for: .touchUpInside)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is UpdateChallenge)
-        XCTAssertEqual((reducer.handlActionArgsForCall(0).0 as! UpdateChallenge).selected, 0)
+        XCTAssertEqual(0, (reducer.handlActionArgsForCall(0).0 as! UpdateChallenge).selected)
     }
 }

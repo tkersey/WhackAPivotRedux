@@ -7,13 +7,13 @@ class ChallengeReducerTests: XCTestCase {
 
     func testInitialization() {
         let state = challengeReducer(state: FakeChallengeState(), action: ReSwiftInit())
-        XCTAssertEqual(state.previouslyTargeted, Set<Person>())
+        XCTAssertEqual(Set<Person>(), state.previouslyTargeted)
     }
 
     func testSettingPeople() {
         let action = SetPeople(people: [person])
         let state = challengeReducer(state: FakeChallengeState(), action: action)
-        XCTAssertEqual(state.people!, [person])
+        XCTAssertEqual([person], state.people!)
     }
 
     func testCreatingAChallenge() {
@@ -24,9 +24,9 @@ class ChallengeReducerTests: XCTestCase {
         let action = CreateChallenge(per: 2)
         let state = challengeReducer(state: fakeState, action: action)
 
-        XCTAssertEqual(state.previouslyTargeted?.count, 1)
-        XCTAssertEqual(state.perChallenge!, 2)
-        XCTAssertEqual(state.challenge!.choices.count, 2)
+        XCTAssertEqual(1, state.previouslyTargeted?.count)
+        XCTAssertEqual(2, state.perChallenge!)
+        XCTAssertEqual(2, state.challenge!.choices.count)
         XCTAssertGreaterThanOrEqual(state.challenge!.target, 0)
         XCTAssertLessThanOrEqual(state.challenge!.target, 1)
     }
@@ -41,13 +41,13 @@ class ChallengeReducerTests: XCTestCase {
         let createAction = CreateChallenge(per: 3)
         let challengeState = challengeReducer(state: fakeState, action: createAction)
 
-        XCTAssertEqual(challengeState.previouslyTargeted?.count, 1)
+        XCTAssertEqual(1, challengeState.previouslyTargeted?.count)
 
         let action = UpdateChallenge(selected: challengeState.challenge!.target)
         let state = challengeReducer(state: challengeState, action: action)
 
         XCTAssert(state.correctSelection!)
-        XCTAssertEqual(state.previouslyTargeted?.count, 2)
+        XCTAssertEqual(2, state.previouslyTargeted?.count)
     }
 
     func testUpdatingAChallengeWithAWrongSelection() {

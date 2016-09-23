@@ -54,6 +54,6 @@ class PeopleServiceTests: XCTestCase {
     func testFailureToHaveToken() {
         let failedService = PeopleService(url: URL(string: "https://google.com")!, token: nil, network: network)
         failedService.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in }, filter: { _ in true })
-        XCTAssertEqual(network.requestCallCount, 0)
+        XCTAssertEqual(0, network.requestCallCount)
     }
 }

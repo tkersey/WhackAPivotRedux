@@ -68,8 +68,8 @@ class LoginViewControllerTests: XCTestCase {
         controller.newState(state: state)
         controller.viewDidAppear(false)
 
-        XCTAssertEqual(webView.loadRequestCallCount, 1)
-        XCTAssertEqual(webView.loadRequestArgsForCall(0).url, state.loginURL)
+        XCTAssertEqual(1, webView.loadRequestCallCount)
+        XCTAssertEqual(state.loginURL, webView.loadRequestArgsForCall(0).url)
     }
 
     func testDismissingIfAlreadyLoggedIn() {
@@ -82,6 +82,6 @@ class LoginViewControllerTests: XCTestCase {
         controller.viewControllerTransitioner = transitioner
         controller.newState(state: state)
 
-        XCTAssertEqual(transitioner.dismissCallCount, 1)
+        XCTAssertEqual(1, transitioner.dismissCallCount)
     }
 }
