@@ -4,8 +4,6 @@ import XCTest
 class PeopleServiceTests: XCTestCase {
     var service: PeopleService!
     var network: FakeNetwork!
-    var tokenStore: FakeTokenStore!
-    var urlProvider: FakeURLProvider!
     var returnedPeople: [Person]!
 
     let examplePeople = [
@@ -19,17 +17,11 @@ class PeopleServiceTests: XCTestCase {
 
         network = FakeNetwork()
 
-        tokenStore = FakeTokenStore()
-        tokenStore.token = "FakeTokenString123"
-
-        urlProvider = FakeURLProvider()
-        urlProvider.peopleURLReturns(stubbedValues: URL(string: "http://example.com"))
-
-        service = PeopleService(network: network, tokenStore: tokenStore, urlProvider: urlProvider)
+        service = PeopleService(url: URL(string: "https://google.com")!, token: "", network: network)
     }
 
     func testSuccess() {
-        service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in })
+        service.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in }, filter: { _ in true })
 
         let exampleData = try! JSONSerialization.data(withJSONObject: examplePeople, options: .prettyPrinted)
         network.requestArgsForCall(0).1(exampleData)
@@ -60,14 +52,8 @@ class PeopleServiceTests: XCTestCase {
     }
 
     func testFailureToHaveToken() {
-        tokenStore.token = nil
-
-        var successCalled = false
-        var failureCalled = false
-
-        service.getPeople(success: { _ in successCalled = true }, failure: { _ in failureCalled = true })
-
-        XCTAssertFalse(successCalled)
-        XCTAssert(failureCalled)
+        let failedService = PeopleService(url: URL(string: "https://google.com")!, token: nil, network: network)
+        failedService.getPeople(success: { people in self.returnedPeople = people}, failure: { _ in }, filter: { _ in true })
+        XCTAssertEqual(network.requestCallCount, 0)
     }
 }

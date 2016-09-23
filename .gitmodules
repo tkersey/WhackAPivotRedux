@@ -1,0 +1,3 @@
+[submodule "External/ReSwift"]
+	path = External/ReSwift
+	url = git@github.com:ReSwift/ReSwift.git
