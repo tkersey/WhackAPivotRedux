@@ -1,4 +1,4 @@
-# Whack-A-Pivot [![Build Status](https://travis-ci.org/whackapivot/WhackAPivotSwift.svg?branch=master)](https://travis-ci.org/whackapivot/WhackAPivotSwift)
+# Whack-A-PivotRedux
 
 ## Description
 This iOS app is a learning tool that helps you connect the names of your work colleagues to their faces.
@@ -6,8 +6,7 @@ This iOS app is a learning tool that helps you connect the names of your work co
 ## Download App
 This will hopefully by distributed by the internal Pivotal AppStore.  Currently it is not deployed.  We will hopefully update this section when it is.
 
-## Develop Locally
-### Dependencies
-You will need:
-- Xcode
-- Fastlane Gem
+## Development
+ * `git clone`
+ * `git submodule update --init --recursive`
+ * `open in Xcode`
