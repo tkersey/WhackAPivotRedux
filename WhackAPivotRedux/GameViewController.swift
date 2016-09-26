@@ -6,19 +6,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
 
-    var viewControllerTransitioner: ViewControllerTransitioner!
     var peopleService: PeopleServiceType = PeopleService(filter: { $0.locationName == "Los Angeles" })
-
-    fileprivate var loggedIn: Bool!
 }
 
 // MARK: - State
 extension GameViewController: StoreSubscriber {
     func newState(state: AppState) {
-        let authenticationState = state.authenticationState
         let challengeState = state.challengeState
-
-        loggedIn = authenticationState.loggedIn
 
         if !challengeState.hasPeople {
             store.dispatch(People(service: peopleService).fetch)
@@ -48,7 +42,6 @@ extension GameViewController {
         super.viewWillAppear(animated)
         store.subscribe(self)
 
-        viewControllerTransitioner = self
         resultLabel.isHidden = true
         resultLabel.text = "Incorrect!"
     }
@@ -56,14 +49,6 @@ extension GameViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         store.unsubscribe(self)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !loggedIn {
-            viewControllerTransitioner.performSegue(withIdentifier: "LoginSegue", sender: self)
-        }
     }
 
     override var prefersStatusBarHidden: Bool {

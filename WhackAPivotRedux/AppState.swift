@@ -1,7 +1,9 @@
 import Foundation
 import ReSwift
+import ReSwiftRouter
 
 struct AppState: StateType {
+    var navigationState: NavigationState
     var authenticationState: AuthenticationStateType
     var challengeState: ChallengeStateType
 

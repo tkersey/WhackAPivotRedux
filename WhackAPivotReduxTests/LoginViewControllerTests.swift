@@ -1,6 +1,7 @@
 import XCTest
 @testable import WhackAPivotRedux
 @testable import ReSwift
+import ReSwiftRouter
 
 class LoginViewControllerTests: XCTestCase {
     var controller: LoginViewController!
@@ -41,7 +42,7 @@ class LoginViewControllerTests: XCTestCase {
     func testLoginURL() {
         XCTAssertNil(controller.loginURL)
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         controller.newState(state: state)
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
@@ -52,7 +53,7 @@ class LoginViewControllerTests: XCTestCase {
     func testLoginSuccessURL() {
         XCTAssertNil(controller.loginSuccessURL)
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         controller.newState(state: state)
 
         controller.beginAppearanceTransition(true, animated: false)
@@ -65,7 +66,7 @@ class LoginViewControllerTests: XCTestCase {
         let webView = FakeWebView()
         controller.webView = webView
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         controller.newState(state: state)
         controller.viewDidAppear(false)
 
@@ -74,13 +75,11 @@ class LoginViewControllerTests: XCTestCase {
     }
 
     func testDismissingIfAlreadyLoggedIn() {
-        var state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        var state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         state.authenticationState.sessionToken = "George RR Token"
 
-        controller.beginAppearanceTransition(true, animated: false)
-        controller.endAppearanceTransition()
-
         controller.viewControllerTransitioner = transitioner
+        _ = controller.view
         controller.newState(state: state)
 
         XCTAssertEqual(1, transitioner.dismissCallCount)

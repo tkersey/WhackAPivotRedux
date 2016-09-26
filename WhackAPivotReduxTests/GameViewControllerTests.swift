@@ -2,6 +2,7 @@ import XCTest
 import UIKit
 @testable import WhackAPivotRedux
 @testable import ReSwift
+import ReSwiftRouter
 
 class GameViewControllerTests: XCTestCase {
     var controller: GameViewController!
@@ -51,37 +52,11 @@ class GameViewControllerTests: XCTestCase {
         XCTAssertEqual("Incorrect!", controller.resultLabel.text)
     }
 
-    func testNotLoggedIn() {
-        let transitioner = FakeViewControllerTransitioner()
-        controller.viewControllerTransitioner = transitioner
-
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
-        controller.newState(state: state)
-
-        controller.viewDidAppear(false)
-
-        XCTAssertEqual(1, transitioner.performSegueCallCount)
-        XCTAssertEqual("LoginSegue", transitioner.performSegueArgsForCall(0).0)
-    }
-
-    func testLoggedIn() {
-        let transitioner = FakeViewControllerTransitioner()
-        controller.viewControllerTransitioner = transitioner
-
-        var state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
-        state.authenticationState.sessionToken = "Another Fake Token"
-        controller.newState(state: state)
-
-        controller.viewDidAppear(false)
-
-        XCTAssertEqual(0, transitioner.performSegueCallCount)
-    }
-
     func testFetchingPeopleIfChallengeHasNone() {
         let reducer = FakeAppReducer()
         var authenticationState = FakeAuthenticationState()
         authenticationState.sessionToken = "GotzATok"
-        let state = AppState(authenticationState: authenticationState, challengeState: FakeChallengeState())
+        let state = AppState(navigationState: NavigationState(), authenticationState: authenticationState, challengeState: FakeChallengeState())
 
         reducer.handleActionReturns(stubbedValues: state)
         peopleService.getPeopleSuccessStub = people
@@ -99,7 +74,7 @@ class GameViewControllerTests: XCTestCase {
         authenticationState.sessionToken = "GotzATok"
         var challengeState = FakeChallengeState()
         challengeState.people = people
-        let state = AppState(authenticationState: authenticationState, challengeState: challengeState)
+        let state = AppState(navigationState: NavigationState(), authenticationState: authenticationState, challengeState: challengeState)
 
         reducer.handleActionReturns(stubbedValues: state)
 
@@ -120,7 +95,7 @@ class GameViewControllerTests: XCTestCase {
         controller.beginAppearanceTransition(true, animated: false)
         controller.endAppearanceTransition()
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: challengeState)
         controller.newState(state: state)
 
         for (index, person) in challenge.choices.enumerated() {
@@ -137,7 +112,7 @@ class GameViewControllerTests: XCTestCase {
         challengeState = challengeReducer(state: challengeState, action: CreateChallenge(per: 2)) as! FakeChallengeState
         challengeState.correctSelection = true
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: challengeState)
         controller.newState(state: state)
 
         controller.buttons[challengeState.challenge!.target].sendActions(for: .touchUpInside)
@@ -145,14 +120,14 @@ class GameViewControllerTests: XCTestCase {
         XCTAssert(controller.resultLabel.isHidden)
     }
 
-    func testInCorrectChallengeSelection() {
+    func testIncorrectChallengeSelection() {
         var challengeState = FakeChallengeState()
         challengeState.previouslyTargeted = Set<Person>()
         challengeState.people = people
         challengeState = challengeReducer(state: challengeState, action: CreateChallenge(per: 2)) as! FakeChallengeState
         challengeState.correctSelection = false
 
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: challengeState)
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: challengeState)
         controller.newState(state: state)
 
         controller.buttons[challengeState.challenge!.target].sendActions(for: .touchUpInside)
@@ -162,7 +137,7 @@ class GameViewControllerTests: XCTestCase {
 
     func testUpdateChallenge() {
         let reducer = FakeAppReducer()
-        let state = AppState(authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
+        let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         reducer.handleActionReturns(stubbedValues: state)
 
         store = Store<AppState>(reducer: reducer, state: state)
