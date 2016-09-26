@@ -377,13 +377,13 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		52D19A601D997E4500B6E313 /* Frameworks */ = {
+		52D19A601D997E4500B6E313 /* External */ = {
 			isa = PBXGroup;
 			children = (
 				52D19A611D997E5800B6E313 /* ReSwift.xcodeproj */,
 				52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */,
 			);
-			name = Frameworks;
+			name = External;
 			sourceTree = "<group>";
 		};
 		52D19A621D997E5800B6E313 /* Products */ = {
@@ -417,11 +417,11 @@
 		52E8F52C1D6619990041A888 = {
 			isa = PBXGroup;
 			children = (
-				52D19A601D997E4500B6E313 /* Frameworks */,
+				52D19A601D997E4500B6E313 /* External */,
+				524738091D83147C00628917 /* Frameworks */,
+				52E8F5361D6619990041A888 /* Products */,
 				52E8F5371D6619990041A888 /* WhackAPivotRedux */,
 				52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */,
-				52E8F5361D6619990041A888 /* Products */,
-				524738091D83147C00628917 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
