@@ -1,3 +1,5 @@
+import ReSwift
+
 func authenticationReducer(state: AuthenticationStateType?, action: Action) -> AuthenticationStateType {
     var state = state ?? AuthenticationState()
 

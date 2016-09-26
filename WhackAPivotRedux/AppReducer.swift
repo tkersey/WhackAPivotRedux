@@ -1,3 +1,5 @@
+import ReSwift
+
 struct AppReducer: Reducer {
     func handleAction(action: Action, state: AppState?) -> AppState {
         return AppState(authenticationState: authenticationReducer(state: state?.authenticationState, action: action),

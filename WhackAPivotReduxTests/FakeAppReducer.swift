@@ -1,4 +1,5 @@
 @testable import WhackAPivotRedux
+@testable import ReSwift
 
 class FakeAppReducer: Reducer {
     private(set) var handleActionCallCount = 0

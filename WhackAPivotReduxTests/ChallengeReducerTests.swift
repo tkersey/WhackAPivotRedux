@@ -1,5 +1,6 @@
 import XCTest
 @testable import WhackAPivotRedux
+@testable import ReSwift
 
 class ChallengeReducerTests: XCTestCase {
     let person = Person(name: "Person", id: 0, locationName: "")

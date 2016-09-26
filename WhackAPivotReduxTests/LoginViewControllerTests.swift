@@ -1,5 +1,6 @@
 import XCTest
 @testable import WhackAPivotRedux
+@testable import ReSwift
 
 class LoginViewControllerTests: XCTestCase {
     var controller: LoginViewController!

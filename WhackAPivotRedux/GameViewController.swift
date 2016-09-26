@@ -1,4 +1,5 @@
 import UIKit
+import ReSwift
 
 class GameViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
