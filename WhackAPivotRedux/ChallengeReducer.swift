@@ -1,3 +1,5 @@
+import ReSwift
+
 func challengeReducer(state: ChallengeStateType?, action: Action) -> ChallengeStateType {
     var state = state ?? ChallengeState()
 

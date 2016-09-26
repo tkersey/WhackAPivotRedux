@@ -1,6 +1,7 @@
 import XCTest
 import UIKit
 @testable import WhackAPivotRedux
+@testable import ReSwift
 
 class GameViewControllerTests: XCTestCase {
     var controller: GameViewController!

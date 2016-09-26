@@ -1,4 +1,5 @@
 import UIKit
+import ReSwift
 
 class People {
     var service: PeopleServiceType
