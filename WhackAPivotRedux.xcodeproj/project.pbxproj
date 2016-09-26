@@ -46,6 +46,7 @@
 		52CFABC61D6CC77700349460 /* PeopleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */; };
 		52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC71D6CCA3600349460 /* PeopleService.swift */; };
 		52D19A791D997E6300B6E313 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D19A6C1D997E5800B6E313 /* ReSwift.framework */; };
+		52D19A951D9998BE00B6E313 /* ReSwiftRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D19A881D99989D00B6E313 /* ReSwiftRouter.framework */; };
 		52D4A6781D70F78C00B78EB5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D4A6771D70F78C00B78EB5 /* Login.storyboard */; };
 		52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A741D6F8FFF00816314 /* GameViewController.swift */; };
 		52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A761D6F902600816314 /* GameViewControllerTests.swift */; };
@@ -114,6 +115,55 @@
 			remoteGlobalIDString = 25DBCF371C30BF2B00D63A58;
 			remoteInfo = "ReSwift-watchOS";
 		};
+		52D19A871D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 625E66CD1C1FFE280027C288;
+			remoteInfo = "ReSwiftRouter-iOS";
+		};
+		52D19A891D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 625E66F11C2000EA0027C288;
+			remoteInfo = "ReSwiftRouterTests-iOS";
+		};
+		52D19A8B1D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6209C04B1C54256F004E6B66;
+			remoteInfo = "ReSwiftRouter-watchOS";
+		};
+		52D19A8D1D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6209C0611C5427E0004E6B66;
+			remoteInfo = "ReSwiftRouter-tvOS";
+		};
+		52D19A8F1D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6209C06A1C5427E0004E6B66;
+			remoteInfo = "ReSwiftRouter-tvOSTests";
+		};
+		52D19A911D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6209C0881C5428DE004E6B66;
+			remoteInfo = "ReSwiftRouter-OSX";
+		};
+		52D19A931D99989D00B6E313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6209C0911C5428DE004E6B66;
+			remoteInfo = "ReSwiftRouter-OSXTests";
+		};
 		52E8F54A1D6619990041A888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52E8F52D1D6619990041A888 /* Project object */;
@@ -164,6 +214,7 @@
 		52CFABC51D6CC77700349460 /* PeopleServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleServiceTests.swift; sourceTree = "<group>"; };
 		52CFABC71D6CCA3600349460 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		52D19A611D997E5800B6E313 /* ReSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReSwift.xcodeproj; path = External/ReSwift/ReSwift.xcodeproj; sourceTree = "<group>"; };
+		52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReSwiftRouter.xcodeproj; path = "External/ReSwift-Router/ReSwiftRouter.xcodeproj"; sourceTree = "<group>"; };
 		52D4A6771D70F78C00B78EB5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		52DA7A741D6F8FFF00816314 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		52DA7A761D6F902600816314 /* GameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerTests.swift; sourceTree = "<group>"; };
@@ -192,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D19A951D9998BE00B6E313 /* ReSwiftRouter.framework in Frameworks */,
 				52D19A791D997E6300B6E313 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				52D19A611D997E5800B6E313 /* ReSwift.xcodeproj */,
+				52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,6 +396,20 @@
 				52D19A741D997E5800B6E313 /* ReSwift.framework */,
 				52D19A761D997E5800B6E313 /* ReSwift-tvOSTests.xctest */,
 				52D19A781D997E5800B6E313 /* ReSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D19A7B1D99989D00B6E313 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52D19A881D99989D00B6E313 /* ReSwiftRouter.framework */,
+				52D19A8A1D99989D00B6E313 /* ReSwiftRouterTests-iOS.xctest */,
+				52D19A8C1D99989D00B6E313 /* ReSwiftRouter.framework */,
+				52D19A8E1D99989D00B6E313 /* ReSwiftRouter.framework */,
+				52D19A901D99989D00B6E313 /* ReSwiftRouter-tvOSTests.xctest */,
+				52D19A921D99989D00B6E313 /* ReSwiftRouter.framework */,
+				52D19A941D99989D00B6E313 /* ReSwiftRouter.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -525,6 +592,10 @@
 					ProductGroup = 52D19A621D997E5800B6E313 /* Products */;
 					ProjectRef = 52D19A611D997E5800B6E313 /* ReSwift.xcodeproj */;
 				},
+				{
+					ProductGroup = 52D19A7B1D99989D00B6E313 /* Products */;
+					ProjectRef = 52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -582,6 +653,55 @@
 			fileType = wrapper.framework;
 			path = ReSwift.framework;
 			remoteRef = 52D19A771D997E5800B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A881D99989D00B6E313 /* ReSwiftRouter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwiftRouter.framework;
+			remoteRef = 52D19A871D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A8A1D99989D00B6E313 /* ReSwiftRouterTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReSwiftRouterTests-iOS.xctest";
+			remoteRef = 52D19A891D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A8C1D99989D00B6E313 /* ReSwiftRouter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwiftRouter.framework;
+			remoteRef = 52D19A8B1D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A8E1D99989D00B6E313 /* ReSwiftRouter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwiftRouter.framework;
+			remoteRef = 52D19A8D1D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A901D99989D00B6E313 /* ReSwiftRouter-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReSwiftRouter-tvOSTests.xctest";
+			remoteRef = 52D19A8F1D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A921D99989D00B6E313 /* ReSwiftRouter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReSwiftRouter.framework;
+			remoteRef = 52D19A911D99989D00B6E313 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52D19A941D99989D00B6E313 /* ReSwiftRouter.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReSwiftRouter.xctest;
+			remoteRef = 52D19A931D99989D00B6E313 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
