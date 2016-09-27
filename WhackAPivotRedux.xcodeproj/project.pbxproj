@@ -30,7 +30,10 @@
 		5284128A1D887AB9008D5224 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528412891D887AB9008D5224 /* AppState.swift */; };
 		5284128D1D887AE6008D5224 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284128C1D887AE6008D5224 /* AppReducer.swift */; };
 		528C96A91D933F7C0094A061 /* FakeWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C96A81D933F7C0094A061 /* FakeWebView.swift */; };
+		52928FFD1D99D4C000246D48 /* GameRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52928FFC1D99D4C000246D48 /* GameRoutable.swift */; };
+		52928FFF1D99D4CA00246D48 /* LoginRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52928FFE1D99D4CA00246D48 /* LoginRoutable.swift */; };
 		529648F41D945FCC00F30246 /* FakeAppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529648F31D945FCC00F30246 /* FakeAppReducer.swift */; };
+		529E32BA1D9AEE34006DFE50 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529E32B91D9AEE34006DFE50 /* AppDelegateTests.swift */; };
 		52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A985381D6B9D1500EB0247 /* UIStoryboard.swift */; };
 		52A9853B1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */; };
 		52A9853F1D6BA43D00EB0247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9853E1D6BA43D00EB0247 /* ViewController.swift */; };
@@ -47,6 +50,8 @@
 		52CFABC81D6CCA3600349460 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFABC71D6CCA3600349460 /* PeopleService.swift */; };
 		52D19A791D997E6300B6E313 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D19A6C1D997E5800B6E313 /* ReSwift.framework */; };
 		52D19A951D9998BE00B6E313 /* ReSwiftRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D19A881D99989D00B6E313 /* ReSwiftRouter.framework */; };
+		52D19AE61D99BA2200B6E313 /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D19AE51D99BA2200B6E313 /* RootRoutable.swift */; };
+		52D19AE81D99BE3700B6E313 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D19AE71D99BE3700B6E313 /* Route.swift */; };
 		52D4A6781D70F78C00B78EB5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D4A6771D70F78C00B78EB5 /* Login.storyboard */; };
 		52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A741D6F8FFF00816314 /* GameViewController.swift */; };
 		52DA7A771D6F902600816314 /* GameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A761D6F902600816314 /* GameViewControllerTests.swift */; };
@@ -198,7 +203,10 @@
 		528412891D887AB9008D5224 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5284128C1D887AE6008D5224 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		528C96A81D933F7C0094A061 /* FakeWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWebView.swift; sourceTree = "<group>"; };
+		52928FFC1D99D4C000246D48 /* GameRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRoutable.swift; sourceTree = "<group>"; };
+		52928FFE1D99D4CA00246D48 /* LoginRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRoutable.swift; sourceTree = "<group>"; };
 		529648F31D945FCC00F30246 /* FakeAppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAppReducer.swift; sourceTree = "<group>"; };
+		529E32B91D9AEE34006DFE50 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		52A985381D6B9D1500EB0247 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		52A9853A1D6B9D1E00EB0247 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
 		52A9853E1D6BA43D00EB0247 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +223,8 @@
 		52CFABC71D6CCA3600349460 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		52D19A611D997E5800B6E313 /* ReSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReSwift.xcodeproj; path = External/ReSwift/ReSwift.xcodeproj; sourceTree = "<group>"; };
 		52D19A7A1D99989D00B6E313 /* ReSwiftRouter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReSwiftRouter.xcodeproj; path = "External/ReSwift-Router/ReSwiftRouter.xcodeproj"; sourceTree = "<group>"; };
+		52D19AE51D99BA2200B6E313 /* RootRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRoutable.swift; sourceTree = "<group>"; };
+		52D19AE71D99BE3700B6E313 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		52D4A6771D70F78C00B78EB5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		52DA7A741D6F8FFF00816314 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		52DA7A761D6F902600816314 /* GameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerTests.swift; sourceTree = "<group>"; };
@@ -414,6 +424,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		52D19AD61D99B9FE00B6E313 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				52928FFC1D99D4C000246D48 /* GameRoutable.swift */,
+				52928FFE1D99D4CA00246D48 /* LoginRoutable.swift */,
+				52D19AE51D99BA2200B6E313 /* RootRoutable.swift */,
+				52D19AE71D99BE3700B6E313 /* Route.swift */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
 		52E8F52C1D6619990041A888 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +467,7 @@
 				520243B31D9065E4009F236F /* main.swift */,
 				52E8F56C1D6638790041A888 /* Models */,
 				5284128B1D887ACC008D5224 /* Reducers */,
+				52D19AD61D99B9FE00B6E313 /* Routes */,
 				52CFABC21D6CBF3E00349460 /* Services */,
 				528412881D887AB0008D5224 /* State */,
 				522184051D6E1BF600A9D80A /* Storyboards */,
@@ -459,6 +481,7 @@
 		52E8F54C1D6619990041A888 /* WhackAPivotReduxTests */ = {
 			isa = PBXGroup;
 			children = (
+				529E32B91D9AEE34006DFE50 /* AppDelegateTests.swift */,
 				52E8F55D1D6625930041A888 /* Controllers */,
 				52E8F5691D6632E80041A888 /* Fakes */,
 				52E8F54F1D6619990041A888 /* Info.plist */,
@@ -743,6 +766,7 @@
 				522184131D6E456900A9D80A /* RandomizerType.swift in Sources */,
 				5227A5321D89D43500A4DBE9 /* SetSessionToken.swift in Sources */,
 				52CFABC41D6CBF5500349460 /* Network.swift in Sources */,
+				52928FFD1D99D4C000246D48 /* GameRoutable.swift in Sources */,
 				52E8F53B1D6619990041A888 /* LoginViewController.swift in Sources */,
 				52E8F5741D663EEC0041A888 /* People.swift in Sources */,
 				52CE51B71D8CAA6400409E61 /* AuthenticationState.swift in Sources */,
@@ -760,7 +784,10 @@
 				52EFBF081D906DF9009F7E36 /* TestAppDelegate.swift in Sources */,
 				52CFABBF1D6CB40F00349460 /* NetworkType.swift in Sources */,
 				5227A5361D89ED3C00A4DBE9 /* Persisted.swift in Sources */,
+				52928FFF1D99D4CA00246D48 /* LoginRoutable.swift in Sources */,
 				52CE51901D8C4AF100409E61 /* UpdateChallenge.swift in Sources */,
+				52D19AE61D99BA2200B6E313 /* RootRoutable.swift in Sources */,
+				52D19AE81D99BE3700B6E313 /* Route.swift in Sources */,
 				52CE51B91D8CAA6E00409E61 /* ChallengeState.swift in Sources */,
 				526EDED81D919E7D00C100D4 /* AuthenticationStateType.swift in Sources */,
 				5227A53A1D89FC0B00A4DBE9 /* SetPeople.swift in Sources */,
@@ -774,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529E32BA1D9AEE34006DFE50 /* AppDelegateTests.swift in Sources */,
 				528C96A91D933F7C0094A061 /* FakeWebView.swift in Sources */,
 				526EDEDA1D919F8500C100D4 /* ChallengeReducerTests.swift in Sources */,
 				526EDED61D919E5B00C100D4 /* FakeAuthenticationState.swift in Sources */,
