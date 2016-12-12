@@ -68,6 +68,7 @@
 		52E97B7E1D74E5B4008A626A /* AnyRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */; };
 		52EFAC2A1D91BC5500A2AEE5 /* FakeChallengeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAC291D91BC5500A2AEE5 /* FakeChallengeState.swift */; };
 		52EFBF081D906DF9009F7E36 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFBF071D906DF9009F7E36 /* TestAppDelegate.swift */; };
+		AEBDFF991DFF5425008B6606 /* AppReducerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDFF981DFF5425008B6606 /* AppReducerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,7 @@
 		52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyRandomizer.swift; sourceTree = "<group>"; };
 		52EFAC291D91BC5500A2AEE5 /* FakeChallengeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeChallengeState.swift; sourceTree = "<group>"; };
 		52EFBF071D906DF9009F7E36 /* TestAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
+		AEBDFF981DFF5425008B6606 /* AppReducerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +354,7 @@
 		52A9853C1D6BA3FD00EB0247 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				AEBDFF981DFF5425008B6606 /* AppReducerType.swift */,
 				52E97B7D1D74E5B4008A626A /* AnyRandomizer.swift */,
 				526EDED71D919E7D00C100D4 /* AuthenticationStateType.swift */,
 				526EDEDB1D91A47200C100D4 /* ChallengeStateType.swift */,
@@ -760,6 +763,7 @@
 				52A985391D6B9D1500EB0247 /* UIStoryboard.swift in Sources */,
 				52E8F5761D6671230041A888 /* ViewControllerTransitioner.swift in Sources */,
 				526EDEDC1D91A47200C100D4 /* ChallengeStateType.swift in Sources */,
+				AEBDFF991DFF5425008B6606 /* AppReducerType.swift in Sources */,
 				52DA7A751D6F8FFF00816314 /* GameViewController.swift in Sources */,
 				5211EC3C1D94A36100877C8A /* Dispatch.swift in Sources */,
 				52CE51BD1D8CB0B200409E61 /* ChallengeReducer.swift in Sources */,

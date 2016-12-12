@@ -7,10 +7,10 @@ var store: Store<AppState>!
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var router: Router<AppState>!
-    var reducer: AnyReducer = AppReducer()
+    var reducer: AppReducerType! = AppReducer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        store = Store<AppState>(reducer: reducer, state: nil)
+        store = Store<AppState>(reducer: reducer.handleAction, state: nil)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIViewController()

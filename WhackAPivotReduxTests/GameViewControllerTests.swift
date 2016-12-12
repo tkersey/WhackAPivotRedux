@@ -20,7 +20,7 @@ class GameViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        store = Store<AppState>(reducer: AppReducer(), state: nil)
+        store = Store<AppState>(reducer: AppReducer().handleAction, state: nil)
 
         peopleService = FakePeopleService()
 
@@ -61,7 +61,7 @@ class GameViewControllerTests: XCTestCase {
         reducer.handleActionReturns(stubbedValues: state)
         peopleService.getPeopleSuccessStub = people
 
-        store = Store<AppState>(reducer: reducer, state: state)
+        store = Store<AppState>(reducer: reducer.handleAction, state: state)
         controller.newState(state: state)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is SetPeople)
@@ -78,7 +78,7 @@ class GameViewControllerTests: XCTestCase {
 
         reducer.handleActionReturns(stubbedValues: state)
 
-        store = Store<AppState>(reducer: reducer, state: state)
+        store = Store<AppState>(reducer: reducer.handleAction, state: state)
         controller.newState(state: state)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is CreateChallenge)
@@ -140,7 +140,7 @@ class GameViewControllerTests: XCTestCase {
         let state = AppState(navigationState: NavigationState(), authenticationState: FakeAuthenticationState(), challengeState: FakeChallengeState())
         reducer.handleActionReturns(stubbedValues: state)
 
-        store = Store<AppState>(reducer: reducer, state: state)
+        store = Store<AppState>(reducer: reducer.handleAction, state: state)
         controller.buttons[0].sendActions(for: .touchUpInside)
 
         XCTAssert(reducer.handlActionArgsForCall(0).0 is UpdateChallenge)

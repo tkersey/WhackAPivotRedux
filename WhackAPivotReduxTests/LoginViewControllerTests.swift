@@ -10,7 +10,7 @@ class LoginViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        store = Store<AppState>(reducer: AppReducer(), state: nil)
+        store = Store<AppState>(reducer: AppReducer().handleAction, state: nil)
         controller = UIStoryboard.loadViewController(viewControllerIdentifier: .login)
 
         transitioner = FakeViewControllerTransitioner()

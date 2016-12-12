@@ -1,7 +1,7 @@
 @testable import WhackAPivotRedux
 @testable import ReSwift
 
-class FakeAppReducer: Reducer {
+class FakeAppReducer: AppReducerType {
     private(set) var handleActionCallCount = 0
     var handleActionStub: ((Action, AppState?) -> AppState)?
     private var handleActionArgs: Array<(Action, AppState?)> = []
