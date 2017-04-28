@@ -1,6 +1,6 @@
 [submodule "External/ReSwift"]
 	path = External/ReSwift
-	url = git@github.com:ReSwift/ReSwift.git
+	url = git@github.com:tkersey/ReSwift.git
 [submodule "External/ReSwift-Router"]
 	path = External/ReSwift-Router
-	url = git@github.com:ReSwift/ReSwift-Router.git
+	url = git@github.com:tkersey/ReSwift-Router.git

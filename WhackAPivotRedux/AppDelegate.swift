@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIViewController()
         if let window = window {
-            router = Router(store: store, rootRoutable: RootRoutable(window: window)) { state in
-                return state.navigationState
+            router = Router(store: store, rootRoutable: RootRoutable(window: window)) { subscription in
+                return subscription.select { $0.navigationState }
             }
 
             if !store.state.authenticationState.loggedIn {
